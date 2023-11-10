@@ -56,7 +56,7 @@ Unter Issues zu finden (https://github.com/health-io/2023-6a/issues)
 
 ### Rolleneinteilung
 * Beutel Gernot:
-* Geerits Eline:
+* Geerits Eline: Projekt Menager
 * Weßel Patricia:
 * Kirstein Janka:
 * Daecke Niklas:
