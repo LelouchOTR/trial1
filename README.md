@@ -1,15 +1,15 @@
 # 2023-6a
-## DWH_HEMATOLOGY
+# DWH_HEMATOLOGY
 
 
-# VORBEMERKUNG
+## VORBEMERKUNG
 Die folgende Dokumentation soll die Strukturierung und Abstimmung des Projektteams "DWH_hematology" verbessern. Die eigentliche Dokumentation des Projekts erfolgt über GitHub.
 Dieses Dokument ist daher für alle offen und beschreibbar, auf einen Track Change Modus wird bewusst verzichtet. Inhaltliche Ergänzungen, die noch nicht im Team besprochen wurden, sollten allerdings kenntlich gemacht werden. Durch kursive Schrift und Angabe des Namenskürzel [gb] können neue Einträge inklusive Autor kenntlich gemacht werden und werden beim nächsten Meeting besprochen.
 
 
 
 
-# THEMENÜBERSICHT
+## THEMENÜBERSICHT
 VORBEMERKUNG	1
 THEMENÜBERSICHT	1
 PROJEKTMANAGEMENT	2
@@ -30,10 +30,10 @@ PROJEKTBETREUUNG	5
 
 
 
-# PROJEKTMANAGEMENT
+## PROJEKTMANAGEMENT
 
 
-# TODO
+### TODO
 Recherche zum Projekt
 Selektion der Features
 Definition von Nutzeranforderungen und funktionalität 
@@ -47,25 +47,25 @@ Klärung eines konzeptionellen Unterschieds von DataWareHouse und Data Lake
 
 
 
-# DOING
+### DOING
 …
 
 
 
 
-# DONE
+### DONE
 …
 
 
 
 
-# ARCHIVE
+### ARCHIVE
 …
 
 
 
 
-# BACKLOG
+### BACKLOG
 Hier sollen Ideen aufgeführt werden, die im aktuellen Projektvorhaben nicht umgesetzt werden können, aber nicht in Vergessenheit geraten sollten.
 …
 
@@ -73,9 +73,9 @@ Hier sollen Ideen aufgeführt werden, die im aktuellen Projektvorhaben nicht umg
 
 
 
-# PROJEKTINHALT UND ZIELE
+## PROJEKTINHALT UND ZIELE
 
-# PROJEKT-RECHERCHE 
+### PROJEKT-RECHERCHE 
 Das Ziel der Projekt-Recherche besteht darin, eine Übersicht über die am Markt verfügbaren DWH-Projekte zu erstellen, die als Open Source- oder Low-Budget-Projekte angeboten werden.
 Recherche über verfügbare Open Source- oder Low-Budget DWH-Projekte
 Geeignete Projekte in verschiedenen Quellen finden: Internet, Communities, Fachforen, Open Source-Verzeichnisse, Open Source-Plattformen, Blogs
@@ -86,7 +86,7 @@ Erstellung einer Liste von verfügbaren Projekten und den jeweiligen Features de
 
 
 
-# FEATURE-SELECTION
+### FEATURE-SELECTION
 Mit der Feature-Selection soll zwei Aufgaben nachgegangen werden: (A) Die Definition der Anforderungen und Funktionalität aus der Sicht der medizinischen Einrichtung und (B) Listung der Features, die durch die Projekte vorgegeben sind. Nach einem Abgleich werden dann 3 Projekte ausgewählt, die beide Voraussetzungen erfüllen.
 
 
@@ -124,7 +124,7 @@ Projekt 3:
 
 
 
-PILOTPROJEKT MITTELS TESTDATENSATZ
+## PILOTPROJEKT MITTELS TESTDATENSATZ
 Um die Funktionalität und Benutzerfreundlichkeit des DWH in einer realen Umgebung zu testen und Erfahrungen zu sammeln, soll ein geeigneter Testdatensatz importiert werden. Die Testdaten bestehen aus zwei Datensätzen: einem Basisdatensatz, der aus einer (anonymisierten) Kohorte von stammzelltransplantierten Patienten besteht, und einem Datensatz, der die entsprechenden Laborparameter enthält. Im Rahmen der Evaluation soll der Vorgang des Imports und selektiven Exports einer Subgruppe beurteilt werden.
 Erstellung eines zweiteiligen Testdatensatzes
 Basisdatensatz von stammzelltransplantierten Patienten
