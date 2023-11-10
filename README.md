@@ -17,18 +17,24 @@ THEMENÜBERSICHT	1
 PROJEKTMANAGEMENT	2
 
 TODO	2
+
 DOING	2
+
 DONE	2
+
 ARCHIVE	2
+
 BACKLOG	2
+
 PROJEKTINHALT UND ZIELE	3
+
 PROJEKT-RECHERCHE	3
+
 FEATURE-SELECTION	3
+
 SOFTWARE INSTALLATION	4
+
 PILOTPROJEKT MITTELS TESTDATENSATZ	4
-TEAMMITGLIEDER	5
-MAILINGLISTE (COPY & PASTE)	5
-PROJEKTBETREUUNG	5
 
 
 
@@ -37,7 +43,7 @@ PROJEKTBETREUUNG	5
 
 
 ### TODO
-- [] Recherche zum Projekt
+[ ] Recherche zum Projekt
 [] Selektion der Features
   [] Definition von Nutzeranforderungen und funktionalität 
   [] Tabellarische Listung der Software-Features
