@@ -11,8 +11,11 @@ Dieses Dokument ist daher für alle offen und beschreibbar, auf einen Track Chan
 
 ## THEMENÜBERSICHT
 VORBEMERKUNG	1
+
 THEMENÜBERSICHT	1
+
 PROJEKTMANAGEMENT	2
+
 TODO	2
 DOING	2
 DONE	2
