@@ -54,7 +54,15 @@ Unter Issues zu finden (https://github.com/health-io/2023-6a/issues)
 (Hier sollen Ideen aufgeführt werden, die im aktuellen Projektvorhaben nicht umgesetzt werden können, aber nicht in Vergessenheit geraten sollten.)
 
 
-
+### Rolleneinteilung
+* Beutel Gernot:
+* Geerits Eline:
+* Weßel Patricia:
+* Kirstein Janka:
+* Daecke Niklas:
+* Lösekrug Julia:
+* Wiechers Lara:
+* Mohammad Muneeb:
 
 
 ## PROJEKTINHALT UND ZIELE
