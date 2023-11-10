@@ -42,15 +42,15 @@ PILOTPROJEKT MITTELS TESTDATENSATZ	4
 ## PROJEKTMANAGEMENT
 Unter Issues zu finden (https://github.com/health-io/2023-6a/issues)
 
-### TODO
+##### TODO
 
-### DOING
+##### DOING
 
-### DONE
+##### DONE
 
-### ARCHIVE
+##### ARCHIVE
 
-### BACKLOG
+##### BACKLOG
 (Hier sollen Ideen aufgeführt werden, die im aktuellen Projektvorhaben nicht umgesetzt werden können, aber nicht in Vergessenheit geraten sollten.)
 
 
