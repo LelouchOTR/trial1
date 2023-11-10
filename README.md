@@ -43,7 +43,7 @@ PILOTPROJEKT MITTELS TESTDATENSATZ	4
 
 
 ### TODO
-[ ] Recherche zum Projekt
+[] Recherche zum Projekt
 [] Selektion der Features
   [] Definition von Nutzeranforderungen und funktionalität 
   [] Tabellarische Listung der Software-Features
