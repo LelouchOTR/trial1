@@ -40,7 +40,7 @@ PILOTPROJEKT MITTELS TESTDATENSATZ	4
 
 
 ## PROJEKTMANAGEMENT
-Unter Issues zu finden
+Unter Issues zu finden (https://github.com/health-io/2023-6a/issues)
 
 ### TODO
 
