@@ -55,13 +55,13 @@ Unter Issues zu finden (https://github.com/health-io/2023-6a/issues)
 
 
 ### Rolleneinteilung
-* Beutel Gernot: Projekt Inhaber
+* Beutel Gernot (MHH): Projekt Inhaber
+* Wiechers Lara (MHH):
 * Geerits Eline: Projekt Maneger
 * Weßel Patricia: Anforderungsmanegment
 * Kirstein Janka: Dokumentationsmanegmet
 * Daecke Niklas: Dokumentationsmanegmet
 * Lösekrug Julia: Anforderungsmanegment
-* Wiechers Lara:
 * Mohammad Muneeb: Entwickler
 * Lelke Thies: Entwickler
 
