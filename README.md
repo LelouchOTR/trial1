@@ -89,7 +89,7 @@ Mit der Feature-Selection soll zwei Aufgaben nachgegangen werden: (A) Die Defini
 * Usability & User Experience
   * Anforderungen der Software mit den Fähigkeiten der User (Humanmediziner) abgleichen
   * Nutzerrollen hinsichtlich Datenabfrage (User) und Datenimport (Admin) definieren
- * Information über die zu speichernden Daten (Texte, Zahlen, Bilder)
+  * Information über die zu speichernden Daten (Texte, Zahlen, Bilder)
 * Kompatibilität und Interoperabilität mit den vorhandenen Daten
 * Überprüfung der Skalierbarkeit und Erweiterbarkeit des DWH (Kapazitätsgrenzen bei wachsender Datenmenge?)
 
