@@ -66,7 +66,7 @@ Unter Issues zu finden (https://github.com/health-io/2023-6a/issues)
 * Lelke Thies: Entwickler
 
 
-## PROJEKTINHALT UND ZIELE
+## PROJEKTINHALT_UND_ZIELE
 
 ### PROJEKT-RECHERCHE 
 Das Ziel der Projekt-Recherche besteht darin, eine Übersicht über die am Markt verfügbaren DWH-Projekte zu erstellen, die als Open Source- oder Low-Budget-Projekte angeboten werden.
