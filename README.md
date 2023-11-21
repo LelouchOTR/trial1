@@ -15,21 +15,7 @@ Dieses Dokument ist daher für alle offen und beschreibbar, auf einen Track Chan
 
 2 PROJEKTMANAGEMENT
 
-2 TODO
-
-2 DOING
-
-2 DONE
-
-2 ARCHIVE
-
-2 BACKLOG
-
 3 PROJEKTINHALT UND ZIELE
-
-3 PROJEKT-RECHERCHE
-
-3 FEATURE-SELECTION
 
 4 SOFTWARE INSTALLATION
 
@@ -39,30 +25,20 @@ Dieses Dokument ist daher für alle offen und beschreibbar, auf einen Track Chan
 
 
 ## PROJEKTMANAGEMENT
-Unter Issues zu finden (https://github.com/health-io/2023-6a/issues)
-
-##### TODO
-
-##### DOING
-
-##### DONE
-
-##### ARCHIVE
-
-##### BACKLOG
-(Hier sollen Ideen aufgeführt werden, die im aktuellen Projektvorhaben nicht umgesetzt werden können, aber nicht in Vergessenheit geraten sollten.)
+Was ist zu tun:
+ - Unter Issues zu finden (https://github.com/health-io/2023-6a/issues)
 
 
 ### Rolleneinteilung
 * Beutel Gernot (MHH): Projekt Inhaber
-* Wiechers Lara (MHH):
 * Geerits Eline: Projekt Maneger
+* Mohammad Muneeb: Entwickler
+* Lelke Thies: Entwickler
+* Lösekrug Julia: Anforderungsmanegment
 * Weßel Patricia: Anforderungsmanegment
 * Kirstein Janka: Dokumentationsmanegmet
 * Daecke Niklas: Dokumentationsmanegmet
-* Lösekrug Julia: Anforderungsmanegment
-* Mohammad Muneeb: Entwickler
-* Lelke Thies: Entwickler
+* Wiechers Lara (MHH):
 
 
 ## PROJEKTINHALT_UND_ZIELE
