@@ -30,5 +30,5 @@ What Is ClickHouse? | ClickHouse Docs
 - JASON based DS
 - No SQL data Sources
 - neue Messwerte leicht zu integrieren
-- 95 USD/ monat
+- 95 USD/ monat oder auch gratis möglich
 
