@@ -1,4 +1,3 @@
-# 2023-6a
 # DWH_HEMATOLOGY
 
 
