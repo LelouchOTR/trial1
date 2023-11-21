@@ -20,9 +20,7 @@ DWH_HEMATOLOGY ist ein ambitioniertes Projekt, das darauf abzielt, die Datenanal
 
 ## THEMENÜBERSICHT
 
-* PROJEKTMANAGEMENT
-
-* PROJEKTINHALT UND ZIELE
+* PROJEKTINHALT_UND_ZIELE
 
 * SOFTWARE INSTALLATION
 
