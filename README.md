@@ -24,7 +24,7 @@ DWH_HEMATOLOGY ist ein ambitioniertes Projekt, das darauf abzielt, die Datenanal
 
 * SOFTWARE_INSTALLATION
 
-* PILOTPROJEKT MITTELS TESTDATENSATZ
+* PILOTPROJEKT_MITTELS_TESTDATENSATZ
 
 
 
