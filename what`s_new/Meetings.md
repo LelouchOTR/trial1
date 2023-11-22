@@ -51,8 +51,26 @@ Projekt:
 - Erste Schritte Installation und Besprechung des weiteren Vorgehens
 
       - Installieren und einarbeiten in elasticsearch
-    
+  
       - Erstellen einer Präsentation für die MHH mit drei Software-Möglichkeiten inkl. vorraussichtliche Kosten und Features
     
       - Erstellen der Präsentation für die Vorlesung (Vorstellung der Gruppe) - OneDrive, gemeinsames bearbeiten (Link in der WhatsApp Gruppe)
+
+
+
+## 22.11 Meeting zu elasticsearch
+
+- haben festgestellt wir müssen ein frontend bauen (web based)
+- Mit betreuern nochmal sprechen clickhoese oder elasticsearch
+- Userstory angesprochen
+- meilisearch angesprochen --> alle bitte mal mit auseinandersetzten
+- Aufgaben verteilung gemacht:
+  
+		  - Muneeb schreibt guid für Elasticsearch
+		  - Patricia überarbeitet Userstory
+	  	- Eline macht die Präsentationen fertig
+			    --> alle anderen überprüfen dies
+	  	- Alle setzten sich damit auseinander wie wir unser Frontend gestallten wollen
+    
+  
     
