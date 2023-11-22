@@ -33,3 +33,11 @@ Mit der Feature-Selection soll zwei Aufgaben nachgegangen werden: (A) Die Defini
   * Verfügbarkeit von Support für Fragen, Problemen oder Unterstützung
 * Die Lizenz des Projekts muss mit dem geplanten Einsatz übereinstimmen
 
+
+### User Story 
+
+![User Story](https://github.com/health-io/2023-6a/assets/147921668/2e3d8b46-35ab-4888-815b-50e5e9c3a3bf)
+
+Freigegeben zum Bearbeiten über Google Drive: https://drive.google.com/file/d/1vzYSqGEXNWq3-iRLwGU6Rgc4lWOO4aEC/view?usp=sharing
+(Auf digrams.net öffnen klicken)
+
