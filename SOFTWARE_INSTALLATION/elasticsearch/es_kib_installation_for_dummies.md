@@ -46,7 +46,7 @@ That's it! You have successfully set up Elasticsearch and Kibana on Windows loca
 
 ## Some common issues: 
 
-1. Port not available: Open up the elasticsearch.yml file again and change the http port to any other port that is free.
+1. Port not available: Open up the elasticsearch.yml file again and change the http port to any other port that is free, for e.g. 49351.
 
     ```http.port: 49351```
 
