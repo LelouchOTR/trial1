@@ -43,7 +43,7 @@ Projekt:
       - elastic search --> Warum können/sollen wir das nutzen, wenn es Geld kostet? --> Am Freitag die Vorstellung abwarten
 
 
-## 17.11.2023: Sofware Vorstellung
+## 17.11.2023: Vorstellung Installation Elastic search
 - kurze mündliche Zusammenfassung des discord Meetings vom 13.11.23 um alle auf einen Stand zu bringen
 
 - Kurzvorstellung der Installation einer kostenlosen Variante von elasticsearch
