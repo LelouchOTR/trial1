@@ -36,11 +36,11 @@ Projekt:
 
 - 3 Databasses aussuchen und der MHH vorstellen
 
-    - Snowflake (https://www.snowflake.com/de/solutions/industries/healthcare-and-life-sciences/)
+      - Snowflake (https://www.snowflake.com/de/solutions/industries/healthcare-and-life-sciences/)
     
-    - Clickhouse (https://clickhouse.com/)
+      - Clickhouse (https://clickhouse.com/)
     
-    - elastic search --> Warum können/sollen wir das nutzen, wenn es Geld kostet? --> Am Freitag die Vorstellung abwarten
+      - elastic search --> Warum können/sollen wir das nutzen, wenn es Geld kostet? --> Am Freitag die Vorstellung abwarten
 
 
 ## 17.11.2023: Sofware Vorstellung
