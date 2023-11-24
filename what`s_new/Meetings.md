@@ -72,5 +72,9 @@ Projekt:
 			    --> alle anderen überprüfen dies
 	  	- Alle setzten sich damit auseinander wie wir unser Frontend gestallten wollen
     
-  
-    
+
+## 24.11 Weiteres Vorgehe
+
+- Ab jetzt wird Opensearch genuzt
+- Frontend Design bis Montag Fertig machen
+- Test Daten generieren
