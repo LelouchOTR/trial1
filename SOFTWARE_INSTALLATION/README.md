@@ -2,7 +2,7 @@
 
 ### Update
 
-aufgrund von usebility im späteren Verlauf (Kosten) wird auf Opensearch umgeschwenkt. Handhabung ist sehr ähnlicj zu elasicsearch.
+##### aufgrund von usebility im späteren Verlauf (Kosten) wird auf Opensearch umgeschwenkt. Handhabung ist sehr ähnlich zu elasicsearch.
 
 
 
@@ -10,4 +10,5 @@ Mit der Installation auf einem lokalen oder virtuellen Server sollen praktische 
   - Projekt 1: Clickhouse
   - Projekt 2: Snowflake
   - Projekt 3: Elasticsearch
+  - Projekt 4: Opensearch
 
