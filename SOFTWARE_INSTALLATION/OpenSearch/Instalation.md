@@ -25,7 +25,7 @@ Once in the directory run docker-compose up (to see what this looks like watch h
     docker-compose up
 
 
-If that does not work make sure to install WSL 2 (https://www.youtube.com/watch?v=UIr5krQVIVI)
+If that does not work make sure to install WSL 2 (https://learn.microsoft.com/en-us/windows/wsl/install)
 
   - now WSL 2 is installed open it with:
 
