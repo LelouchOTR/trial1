@@ -42,7 +42,17 @@ If that does not work make sure to install WSL 2 (https://www.youtube.com/watch?
 ![image](https://github.com/health-io/2023-6a/assets/101985205/d5deedb2-7b39-40cf-b9ab-bc8f508cb448)
 
 
+  - check if the installation has worked with:
+
+        docker run hello-world
+
+  - once vrified run docker-composed (if docker dose not run verify Group Membership)
+
+        docker-compose up
+
+    
+![image](https://github.com/health-io/2023-6a/assets/101985205/255ebc9b-a405-4e80-8bb4-c89437a81bc6)
 
 
-
+  - now you can navigate to: http://localhost:5601/ 
 
