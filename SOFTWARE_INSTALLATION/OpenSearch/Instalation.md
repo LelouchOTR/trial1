@@ -1,10 +1,6 @@
 # How to install
 
 
-https://opensearch.org/docs/latest/install-and-configure/install-dashboards/windows/
-https://www.youtube.com/watch?v=UIr5krQVIVI
-
-
 Start by goingt to: https://opensearch.org/downloads.html
 
 Then right klick on docker-compose.yml and download into your desired directory
