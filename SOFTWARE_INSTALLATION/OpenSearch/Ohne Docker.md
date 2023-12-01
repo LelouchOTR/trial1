@@ -13,3 +13,5 @@
       http.cors.allow-headers: X-Requested-With,X-Auth-Token,Content-Type,Content-Length
 
 3.   ./opensearch-windows-install.bat im terminal des Ordners eingeben & ausführen
+
+4. Im Browser eingeben: http://localhost:9200/
