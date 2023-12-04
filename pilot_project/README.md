@@ -2,7 +2,7 @@
 
 Make sure Node.js and npm are installed and configured correctly. 
 
-Make sure you have the data from the sample data present in the ```bulk.json``` file imported into elasticsearch(/opensearch). You can bulk import data into elasticsearch using: 
+Make sure you have the data from the sample data file present in the ```bulk.json``` file imported into elasticsearch(/opensearch). You will find the file in the ```simple_search_interface``` branch's root directory. You can bulk import data into elasticsearch using: 
 
 ```
 curl -X PUT "localhost:9200/productdata/_bulk?pretty" -H 'Content-Type: application/x-ndjson' --data-binary "@\path\to\bulk.json"
