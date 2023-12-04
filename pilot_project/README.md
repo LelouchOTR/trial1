@@ -191,6 +191,6 @@ You can now access your app at port 3000. Make sure elasticsearch(/opensearch) i
 
 ## How to not start from scratch
 
-Clone my branch onto your machine. Navigate to the root folder and run ```npm install``` to update the dependencies. Then run ```npm run dev```
+Clone my branch onto your machine. Navigate to the root folder of the app and run ```npm install``` to update the dependencies. Then run ```npm run dev```
 
 You should now see the search interface on port 3000 and be able to interact with it. 
