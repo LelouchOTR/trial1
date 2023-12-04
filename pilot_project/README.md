@@ -153,7 +153,7 @@ export default function Search() {
 }
 ```
 
-## Customize the search
+### Customize the search
 
 Create/Modify ```search.js``` file in the ```app/pages``` directory to add the following code:
 
