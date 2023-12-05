@@ -18,7 +18,7 @@ DWH_HEMATOLOGY ist ein ambitioniertes Projekt, das darauf abzielt, die Datenanal
 
 
 
-## THEMENÜBERSICHT
+## Themenübersicht
 
 
 * PROJEKTINHALT_UND_ZIELE
@@ -36,7 +36,7 @@ DWH_HEMATOLOGY ist ein ambitioniertes Projekt, das darauf abzielt, die Datenanal
 
 
 
-## PROJEKTMANAGEMENT
+## Projektmanagement
 Was ist zu tun:
  - Unter Issues zu finden (https://github.com/health-io/2023-6a/issues)
 
@@ -52,3 +52,8 @@ Was ist zu tun:
 * Daecke Niklas: Dokumentationsmanegmet
 * Wiechers Lara (MHH):
 
+## Die Grundidee
+
+### Userstory
+
+### Frontend
