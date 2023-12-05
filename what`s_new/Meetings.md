@@ -73,8 +73,28 @@ Projekt:
 	  	- Alle setzten sich damit auseinander wie wir unser Frontend gestallten wollen
     
 
-## 24.11 Weiteres Vorgehe
+## 24.11 Besprechung in und nach der Vorlesung
 
-- Ab jetzt wird Opensearch genuzt
-- Frontend Design bis Montag Fertig machen
+- Opensearch als alternative für elasticsearch
+- Frontend Design Idee bis Montag Fertig machen
 - Test Daten generieren
+
+
+## 01.12 Besprechung in und nach der Vorlesung
+
+- alle bringen openserch zum laufen
+- alle setzen sich mit React auseinander (Tutorials schauen, ausprobieren, ...)
+- updaten der bisherigen Stände, was bereits besteht auf GitHub 
+
+
+## 01.12. Dokumentenmanager-Besprechung
+
+- Ordnerstruktur bearbeiten in GitHub (nicht viele Ordner mit nur ein oder zwei Dateien dirn)
+  	- Vorgabe für Struktur s. Github
+  	- nicht jeder Ordner braucht eine readme.md Datei
+- auf der ersten Seite (README.md) sind Bilder gern gesehen, die schnell und einfach erklären was wir machen
+- Ordner und Dateinamen nicht in Großbuchstaben 
+- Branches verwenden
+- Code und Bilder die bestehen auch immer gleich auf GitHub
+- Autodoc string in visual Studio Code nutzen für erklärungen von Funktionen oder ähnliches empohlen
+- 

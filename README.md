@@ -52,8 +52,12 @@ Was ist zu tun:
 * Daecke Niklas: Dokumentationsmanegmet
 * Wiechers Lara (MHH):
 
-## Die Grundidee
+
+## Übersicht über Grundidee
 
 ### Userstory
+![alt text](docs/user-story.png)
 
 ### Frontend
+![alt text](docs/erster-entwurf-frontend.jpeg)
+
