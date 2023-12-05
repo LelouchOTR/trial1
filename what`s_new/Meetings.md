@@ -73,8 +73,15 @@ Projekt:
 	  	- Alle setzten sich damit auseinander wie wir unser Frontend gestallten wollen
     
 
-## 24.11 Weiteres Vorgehe
+## 24.11 Besprechung in und nach der Vorlesung
 
-- Ab jetzt wird Opensearch genuzt
-- Frontend Design bis Montag Fertig machen
+- Opensearch als alternative für elasticsearch
+- Frontend Design Idee bis Montag Fertig machen
 - Test Daten generieren
+
+
+## 01.12 Besprechung in und nach der Vorlesung
+
+- alle bringen openserch zum laufen
+- alle setzen sich mit React auseinander (Tutorials schauen, ausprobieren, ...)
+- updaten der bisherigen Stände, was bereits besteht auf GitHub 
