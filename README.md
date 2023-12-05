@@ -52,3 +52,12 @@ Was ist zu tun:
 * Daecke Niklas: Dokumentationsmanegmet
 * Wiechers Lara (MHH):
 
+
+## Übersicht über Grundidee
+
+### Userstory
+
+
+### Frontend
+![alt text](docs/erster-Entwurf-Frontend.jpeg)
+
