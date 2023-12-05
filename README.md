@@ -56,7 +56,7 @@ Was ist zu tun:
 ## Übersicht über Grundidee
 
 ### Userstory
-![alt text](docs/User Story.png)
+![alt text](docs/user-story.png)
 
 ### Frontend
 ![alt text](docs/erster-Entwurf-Frontend.jpeg)
