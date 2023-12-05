@@ -1,52 +1,43 @@
+// Import the Client module from @searchkit/api
 import Client from "@searchkit/api";
+// Import the createContext function from react
 import { createContext } from "react";
+// Import the NextRequest and NextResponse types from next/server
 import { NextRequest, NextResponse } from 'next/server'
 
+// Define the api configuration object
 const apiConfig = {
   connection: {
-    host: "http://localhost:9200"
-    // if you are authenticating with api key
-    // https://www.searchkit.co/docs/guides/setup-elasticsearch#connecting-with-api-key
-    // apiKey: '###'
-    // if you are authenticating with username/password
-    // https://www.searchkit.co/docs/guides/setup-elasticsearch#connecting-with-usernamepassword
-    // auth: {
-    //   username: "elastic",
-    //   password: "changeme"
-    // },
+    host: "http://localhost:9200" // Specify the host of the Elasticsearch server
   },
   search_settings: {
-    // search_attributes: ["name", "description", "brand", "categories", "hierarchicalCategories", "type", "price", "price_range", "image", "url", "free_shipping", "popularity", "rating"],
-    search_attributes: ["name", "description"],
-    result_attributes: ["name", "price", "description", "categories"],
-    highlight_attributes: ["name"],
-    facet_attributes: [{ attribute: 'price', field: 'price', type: 'numeric' }],
-    //facet_attributes: [{attribute: "free_shipping", type: "free_shipping.keyword"},{attribute: "price", type: "numeric"}],
-    //sorting: {default: {field: "_score", order: "desc"}, _price_asc: {field: "price", order: "asc"}, _price_desc: {field: "price", order: "desc"}},
-    //facet_attributes: ["free_shipping"]
-    //facet_attributes: ["price"]
+    search_attributes: ["name", "description"], // Specify the attributes to search on
+    result_attributes: ["name", "price", "description", "categories"], // Specify the attributes to return in the results
+    highlight_attributes: ["name"], // Specify the attributes to highlight in the results
+    facet_attributes: [{ attribute: 'price', field: 'price', type: 'numeric' }], // Specify the attributes to facet on
   },
 };
 
+// Create a client instance using the api configuration
 const apiClient = Client(apiConfig);
 
-
-
+// Define the default export function that handles the POST request
 export async function POST(req: NextRequest, res: NextResponse) {
-  const data = await req.json()
+  const data = await req.json() // Get the request data as JSON
 
+  // Call the handleRequest method of the client with the data and a custom query function
   const results = await apiClient.handleRequest(data, {
     getQuery: (query, search_attributes) => {
       return [
         {
-          combined_fields: {
-            query,
-            fields: search_attributes,
+          combined_fields: { // Use the combined_fields query type
+            query, // Pass the query string
+            fields: search_attributes, // Pass the search attributes
           },
         },
       ];
     },
   });
 
-  return NextResponse.json(results)
+  return NextResponse.json(results) // Return the results as JSON
 }
