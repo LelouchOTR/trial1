@@ -85,3 +85,16 @@ Projekt:
 - alle bringen openserch zum laufen
 - alle setzen sich mit React auseinander (Tutorials schauen, ausprobieren, ...)
 - updaten der bisherigen Stände, was bereits besteht auf GitHub 
+
+
+## 01.12. Dokumentenmanager-Besprechung
+
+- Ordnerstruktur bearbeiten in GitHub (nicht viele Ordner mit nur ein oder zwei Dateien dirn)
+  	- Vorgabe für Struktur s. Github
+  	- nicht jeder Ordner braucht eine readme.md Datei
+- auf der ersten Seite (README.md) sind Bilder gern gesehen, die schnell und einfach erklären was wir machen
+- Ordner und Dateinamen nicht in Großbuchstaben 
+- Branches verwenden
+- Code und Bilder die bestehen auch immer gleich auf GitHub
+- Autodoc string in visual Studio Code nutzen für erklärungen von Funktionen oder ähnliches empohlen
+- 
