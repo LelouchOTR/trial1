@@ -97,7 +97,7 @@ Projekt:
 - Branches verwenden
 - Code und Bilder die bestehen auch immer gleich auf GitHub
 - Autodoc string in visual Studio Code nutzen für erklärungen von Funktionen oder ähnliches empohlen
-- 
+  
 
 ## 06.12 Pilot- Projekt 
 - Pilot Projekt von Muneeb auf zweiten Rechner installiert
