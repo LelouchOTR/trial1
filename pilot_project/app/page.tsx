@@ -35,10 +35,15 @@ const readUploadFile = (e) => {
       const workbook = xlsx.read(data, { type: "array" }); // Read the data as an array of bytes
       const sheetName = workbook.SheetNames[0]; // Get the name of the first sheet
       const worksheet = workbook.Sheets[sheetName]; // Get the worksheet object
-      const json = xlsx.utils.sheet_to_json(worksheet); // Convert the worksheet to JSON
-      console.log(json); // Log the JSON data to the console
+      const json1 = xlsx.utils.sheet_to_json(worksheet); // Convert the worksheet to JSON
+      console.log(json1); // Log the JSON data to the console
+      const operations = json1.flatMap(doc => [{index: {_index: 'products2'}}, doc])
+      console.log(operations)
     };
     reader.readAsArrayBuffer(e.target.files[0]); // Read the file as an array buffer
+
+    
+
   }
 }
 
