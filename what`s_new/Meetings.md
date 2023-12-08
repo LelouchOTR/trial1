@@ -97,4 +97,15 @@ Projekt:
 - Branches verwenden
 - Code und Bilder die bestehen auch immer gleich auf GitHub
 - Autodoc string in visual Studio Code nutzen für erklärungen von Funktionen oder ähnliches empohlen
-- 
+  
+
+## 06.12 Pilot- Projekt 
+- Pilot Projekt von Muneeb auf zweiten Rechner installiert
+- Problem: Suchfunktion funktioniert nicht mit OpenSearch
+  - Ungewiss wie viel Aufwand es ist das Problem zu lösen
+- Derzeitige Lösung: Verwendung von Elastich Search
+- Next Steps (genauere Ausführung in Issues):
+  	- Download Button
+  	- Anpassung des Test datas auf Zahlen
+  	- Graphische Darstellung
+  ![Bildschirmfoto 2023-12-07 um 10 49 58](https://github.com/health-io/2023-6a/assets/147921668/c0f92ef1-ea65-4755-ad31-6dbd16feb2db)
