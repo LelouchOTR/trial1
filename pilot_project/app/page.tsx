@@ -8,7 +8,10 @@ import createClient from "@searchkit/instantsearch-client"; // Import the search
 import Head from "next/head"; // Import the Head component from next.js
 import * as xlsx from "xlsx"; // Import the xlsx module for reading and writing Excel files
 
-import readUploadFile from "./api/on-file-upload";
+import readUploadFile from "./components/on-file-upload";
+
+// import * as opensearch from '@opensearch-project/opensearch'; // Import the opensearch module
+// const { searchClient } = require('@opensearch-project/opensearch');
 
 // Create a search client using the searchkit client module
 const searchClient = createClient({
