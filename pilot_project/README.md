@@ -215,6 +215,6 @@ You should now see the search interface on port 3000 and be able to interact wit
 
 ## Next Step: Upload data from excel to your elastic node
 
-In the web app, upload the file ```example_medical.xlsx``` present in the branch ```simple-search-interface-with-upload-file-feature``` in the root directory. The data will be uploaded to a temporary index called ```temp_index```. Take note that any data that was already present on this index will be overwritten.
+In the web app, upload the file ```example_medical.xlsx``` present in the branch ```simple-search-interface-with-upload-file-feature``` in the root directory. The data will be uploaded to a temporary index called ```temp_index```. Take note that any data that was already present on this index will be overwritten. The functionality on empty fields/values has not been tested.
 
-To easily view the data in the index, download the tool called ```elasticvue``` from https://elasticvue.com/ and navigate to ```indices``` and click on ```temp_index```. You will see the sample patient data, if you successfully managed to upload the file to the elastic node.
+To easily view the data in the index, download the tool called ```elasticvue``` (or add the browser extension) from https://elasticvue.com/ and navigate to ```indices``` and click on ```temp_index```. If you successfully managed to upload the file to your elastic node, you will see the sample patient data.
