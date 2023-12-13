@@ -21,15 +21,15 @@ DWH_HEMATOLOGY ist ein ambitioniertes Projekt, das darauf abzielt, die Datenanal
 ## Themenübersicht
 
 
-* PROJEKTINHALT_UND_ZIELE
+* Projektinhalt und Ziele
 
    --> https://github.com/health-io/2023-6a/tree/589fa310a0b13054b6650bfa75a407dc34122d74/PROJEKTINHALT_UND_ZIELE
 
-* SOFTWARE_INSTALLATION
+* Anleitungen zur Software-Installation
 
     --> https://github.com/health-io/2023-6a/tree/5917b3b15131adde916f92f950c7bf07c0ed64c9/SOFTWARE_INSTALLATION
   
-* PILOTPROJEKT_MITTELS_TESTDATENSATZ
+* Pilotprojekt mittels Testdatensatz
 
     --> https://github.com/health-io/2023-6a/tree/babded000d2b04a2f73a27b6adae0a66c1fafae8/PILOTPROJEKT_MITTELS_TESTDATENSATZ
 
@@ -37,8 +37,9 @@ DWH_HEMATOLOGY ist ein ambitioniertes Projekt, das darauf abzielt, die Datenanal
 
 
 ## Projektmanagement
-Was ist zu tun:
- - Unter Issues zu finden (https://github.com/health-io/2023-6a/issues)
+
+Die aktuellen To Dos sind in dem Reiter Issues zu finden:
+ -  (https://github.com/health-io/2023-6a/issues)
 
 
 ### Rolleneinteilung
@@ -55,9 +56,18 @@ Was ist zu tun:
 
 ## Übersicht über Grundidee
 
+Für ein einfaches Verständnis über die Idee/Ziele dieses Projekts sind hier die Userstory und eine erste Idee eines möglichen Frontend für eine einfache Nutzung des DWH dargestellt. 
+
 ### Userstory
+
+Durch das Projekt soll es möglich sein, alle zu einem Patienten gesammelten Daten zusammenzufügen und gemeinsam zu speichern. 
+Benötigt ein Arzt zu einem späteren Zeitpunkt die Daten oder auch nur einen Teil davon, kann er sich diese über ein intuitiv zu bedienenen Frondend ausgeben lassen. 
+
 ![alt text](docs/user-story.png)
 
 ### Frontend
+
+Eine Idee für ein Frondend für die intuitive Nutzung ist hier dargestellt. Inwieweit dies umgesetzt werden kann muss im laufe des Projekts geklärt werden.
+
 ![alt text](docs/erster-entwurf-frontend.jpeg)
 
