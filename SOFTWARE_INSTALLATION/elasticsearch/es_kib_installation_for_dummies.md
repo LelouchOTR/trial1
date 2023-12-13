@@ -17,6 +17,18 @@ In this tutorial, you will learn how to install Elasticsearch and Kibana on your
 
     ```xpack.security.enabled: false```
 
+    and add
+
+        http.cors.enabled : true
+
+       http.cors.allow-origin: "*"
+
+        http.cors.allow-methods: OPTIONS,HEAD,GET,POST,PUT,DELETE
+
+        http.cors.allow-headers: X-Requested-With,X-Auth-Token,Content-Type,Content-Length
+
+
+
 3. Open a Powershell terminal and navigate to the extracted folder.
 
     ```cd C:\Users\username\Downloads\elasticsearch-8.11.1```
