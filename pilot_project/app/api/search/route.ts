@@ -13,15 +13,13 @@ const apiConfig = {
   search_settings: {
     search_attributes: ["name", "description"], // Specify the attributes to search on
     result_attributes: ["name", "price", "description", "categories"], // Specify the attributes to return in the results
-    highlight_attributes: ["name"], // Specify the attributes to highlight in the results
+    highlight_attributes: ["name", "price"], // Specify the attributes to highlight in the results
     facet_attributes: [{ attribute: 'price', field: 'price', type: 'numeric' }], // Specify the attributes to facet on
   },
 };
 
 // Create a client instance using the api configuration
 const apiClient = Client(apiConfig);
-
-
 
 // Define the default export function that handles the POST request
 export async function POST(req: NextRequest, res: NextResponse) {

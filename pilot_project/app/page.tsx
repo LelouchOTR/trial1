@@ -8,6 +8,11 @@ import createClient from "@searchkit/instantsearch-client"; // Import the search
 import Head from "next/head"; // Import the Head component from next.js
 import * as xlsx from "xlsx"; // Import the xlsx module for reading and writing Excel files
 
+import readUploadFile from "./modules/on-file-upload";
+
+// import * as opensearch from '@opensearch-project/opensearch'; // Import the opensearch module
+// const { searchClient } = require('@opensearch-project/opensearch');
+
 // Create a search client using the searchkit client module
 const searchClient = createClient({
   url: "/api/search" // Specify the API endpoint for the search
@@ -25,27 +30,7 @@ const hitView = ({ hit }: { hit: any }) => {
   )
 }
 
-// Define a function that reads the uploaded file and converts it to JSON
-const readUploadFile = (e) => {
-  e.preventDefault(); // Prevent the default behavior of the event
-  if (e.target.files) { // Check if there are any files selected
-    const reader = new FileReader(); // Create a file reader object
-    reader.onload = (e) => { // Define a callback function when the file is loaded
-      const data = e.target.result; // Get the file data
-      const workbook = xlsx.read(data, { type: "array" }); // Read the data as an array of bytes
-      const sheetName = workbook.SheetNames[0]; // Get the name of the first sheet
-      const worksheet = workbook.Sheets[sheetName]; // Get the worksheet object
-      const json1 = xlsx.utils.sheet_to_json(worksheet); // Convert the worksheet to JSON
-      console.log(json1); // Log the JSON data to the console
-      const operations = json1.flatMap(doc => [{index: {_index: 'products2'}}, doc])
-      console.log(operations)
-    };
-    reader.readAsArrayBuffer(e.target.files[0]); // Read the file as an array buffer
 
-    
-
-  }
-}
 
 // Define the default export function that returns the search component
 export default function Search() {
