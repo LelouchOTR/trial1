@@ -121,3 +121,4 @@ Termine:
  - Bearbeitung GitHub (Links, Rechtschreibfehler, ...)
  - Frondend-Web-App auf verschiednen Laptops zum laufen gebracht
    - Hauptfehler: hochladen der Dateien nicht über curl, sondern über curl.exe (korrigiert auf GitHub)
+ - nächste Woche findet die VL vermutlich nicht statt
