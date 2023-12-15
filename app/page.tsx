@@ -25,26 +25,9 @@ const searchClient = createClient({
   url: "/api/search", // Specify the API endpoint for the search
 });
 
-// Define a custom hit component that renders the hit data
-const hitView = ({ hit }: { hit: any }) => {
-  return (
-    <div>
-      <h2>
-        {/* Display the name of the product */}
-        {hit.name}
-      </h2>
-      <p>
-        {/* Display the price of the product */}
-        {hit.price}
-      </p>
-      <p>
-        {/* Display the description of the product */}
-        {hit.description}
-      </p>
-      <br />
-    </div>
-  );
-};
+// Define the custom hit component
+const hitView = ({ hit }: { hit: any }) => {};
+
 // Define the default export function that returns the search component
 export default function Search() {
   return (
