@@ -2,7 +2,7 @@
 
 ### Update
 
-##### aufgrund von usebility im späteren Verlauf (Kosten) wird auf Opensearch umgeschwenkt. Handhabung ist sehr ähnlich zu elasicsearch.
+##### Aufgrund von usebility im späteren Verlauf (Kosten) wird auf Opensearch umgeschwenkt. Die Handhabung ist sehr ähnlich zu elasticsearch.
 
 
 
