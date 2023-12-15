@@ -12,7 +12,7 @@ const apiConfig = {
   },
   search_settings: {
     search_attributes: ["name", "description"], // Specify the attributes to search on
-    result_attributes: ["name", "price", "description", "categories"], // Specify the attributes to return in the results
+    result_attributes: ["name", "rating", "price", "popularity"], // Specify the attributes to return in the results
     highlight_attributes: ["name", "price"], // Specify the attributes to highlight in the results
     facet_attributes: [{ attribute: 'price', field: 'price', type: 'numeric' }], // Specify the attributes to facet on
   },

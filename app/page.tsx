@@ -1,14 +1,13 @@
 "use client" // Use client-side rendering
 
 // Import the necessary modules from react-instantsearch and react
-import { InstantSearch, SearchBox, Hits, RefinementList, RangeInput, SortBy } from "react-instantsearch";
+import { InstantSearch, SearchBox, Hits, RefinementList, RangeInput, SortBy, Pagination } from "react-instantsearch";
 import React, { Fragment, createContext } from "react";
 import createClient from "@searchkit/instantsearch-client"; // Import the searchkit client module
 //import Hit from "./components/Hit";
 import Head from "next/head"; // Import the Head component from next.js
-import * as xlsx from "xlsx"; // Import the xlsx module for reading and writing Excel files
-
-import readUploadFile from "./modules/on-file-upload";
+import readUploadFile from "./modules/on-file-upload"; // Import the function to read the uploaded file into a JSON object
+import CustomHits from "./components/custom-hits"; // Import the custom hits component to render the hit data in a table
 
 // import * as opensearch from '@opensearch-project/opensearch'; // Import the opensearch module
 // const { searchClient } = require('@opensearch-project/opensearch');
@@ -29,9 +28,6 @@ const hitView = ({ hit }: { hit: any }) => {
     </div>
   )
 }
-
-
-
 // Define the default export function that returns the search component
 export default function Search() {
   return (
@@ -62,7 +58,12 @@ export default function Search() {
         <div> Price {/*Create a div element for the price label*/} </div>
         <RangeInput attribute="price" // Create a RangeInput component for the price attribute 
         />
-        <Hits hitComponent={hitView} // Create a Hits component with the custom hit component 
+
+        <CustomHits hitComponent={hitView} // Create a Hits component with the custom hit component
+        />
+
+
+        <Pagination // Create a Pagination component
         />
 
       </InstantSearch>
@@ -70,3 +71,4 @@ export default function Search() {
     </>
   );
 }
+

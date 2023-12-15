@@ -1,5 +1,4 @@
 import * as xlsx from "xlsx"; // Import xlsx to read Excel files
-
 import bulkUploadToElastic from "./bulk-to-elastic";
 
 /**
