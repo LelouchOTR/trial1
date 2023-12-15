@@ -22,7 +22,7 @@ DWH_HEMATOLOGY ist ein ambitioniertes Projekt, das darauf abzielt, die Datenanal
 
 
 * Projektinhalt und Ziele
-
+   --> docs/Projektinhalt_und_Ziele
    --> https://github.com/health-io/2023-6a/tree/589fa310a0b13054b6650bfa75a407dc34122d74/PROJEKTINHALT_UND_ZIELE
 
 * Anleitungen zur Software-Installation
