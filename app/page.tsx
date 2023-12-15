@@ -1,7 +1,15 @@
-"use client" // Use client-side rendering
+"use client"; // Use client-side rendering
 
 // Import the necessary modules from react-instantsearch and react
-import { InstantSearch, SearchBox, Hits, RefinementList, RangeInput, SortBy, Pagination } from "react-instantsearch";
+import {
+  InstantSearch,
+  SearchBox,
+  Hits,
+  RefinementList,
+  RangeInput,
+  SortBy,
+  Pagination,
+} from "react-instantsearch";
 import React, { Fragment, createContext } from "react";
 import createClient from "@searchkit/instantsearch-client"; // Import the searchkit client module
 //import Hit from "./components/Hit";
@@ -14,26 +22,38 @@ import CustomHits from "./components/custom-hits"; // Import the custom hits com
 
 // Create a search client using the searchkit client module
 const searchClient = createClient({
-  url: "/api/search" // Specify the API endpoint for the search
+  url: "/api/search", // Specify the API endpoint for the search
 });
 
 // Define a custom hit component that renders the hit data
 const hitView = ({ hit }: { hit: any }) => {
   return (
     <div>
-      <h2>{/* Display the name of the product */}{hit.name}</h2>
-      <p>{/* Display the price of the product */}{hit.price}</p>
-      <p>{/* Display the description of the product */}{hit.description}</p>
+      <h2>
+        {/* Display the name of the product */}
+        {hit.name}
+      </h2>
+      <p>
+        {/* Display the price of the product */}
+        {hit.price}
+      </p>
+      <p>
+        {/* Display the description of the product */}
+        {hit.description}
+      </p>
       <br />
     </div>
-  )
-}
+  );
+};
 // Define the default export function that returns the search component
 export default function Search() {
   return (
     <>
-      <form> {/* Create a form element */}
-        <label htmlFor="upload">Upload File</label> {/* Create a label for the file input */}
+      <form>
+        {" "}
+        {/* Create a form element */}
+        <label htmlFor="upload">Upload File</label>{" "}
+        {/* Create a label for the file input */}
         <input
           type="file" // Specify the input type as file
           name="upload" // Specify the input name as upload
@@ -45,30 +65,32 @@ export default function Search() {
         searchClient={searchClient} // Pass the search client as a prop
         indexName="products" // Pass the index name as a prop
       >
-        <Head> {/*Create a Head component*/}
-          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7/themes/satellite-min.css" // Link to the instantsearch.css stylesheet 
+        <Head>
+          {" "}
+          {/*Create a Head component*/}
+          <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/instantsearch.css@7/themes/satellite-min.css" // Link to the instantsearch.css stylesheet
           />
-
         </Head>
         <SearchBox // Create a SearchBox component
         />
 
-        <RefinementList attribute='free_shipping' // Create a RefinementList component for the free_shipping attribute 
+        <RefinementList
+          attribute="free_shipping" // Create a RefinementList component for the free_shipping attribute
         />
         <div> Price {/*Create a div element for the price label*/} </div>
-        <RangeInput attribute="price" // Create a RangeInput component for the price attribute 
+        <RangeInput
+          attribute="price" // Create a RangeInput component for the price attribute
         />
 
-        <CustomHits hitComponent={hitView} // Create a Hits component with the custom hit component
+        <CustomHits
+          hitComponent={hitView} // Create a Hits component with the custom hit component
         />
-
 
         <Pagination // Create a Pagination component
         />
-
       </InstantSearch>
-
     </>
   );
 }
-
