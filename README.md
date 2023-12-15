@@ -33,8 +33,8 @@ DWH_HEMATOLOGY ist ein ambitioniertes Projekt, das darauf abzielt, die Datenanal
 
 ## Projektmanagement
 
-Die aktuellen To Dos sind in dem Reiter Issues zu finden:
- -  (https://github.com/health-io/2023-6a/issues)
+Die aktuellen To Dos sind in dem Reiter [Issues](https://github.com/health-io/2023-6a/issues) zu finden:
+ 
 
 
 ### Rolleneinteilung
