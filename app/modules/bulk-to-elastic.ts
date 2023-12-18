@@ -1,5 +1,7 @@
 "use server";
 
+import index_module from "./index-module";
+
 const { Client } = require("@elastic/elasticsearch"); // Import the Client class from the @elastic/elasticsearch module
 const client = new Client({ node: "http://localhost:9200" }); // Create a new client instance that connects to the local node
 
@@ -9,69 +11,83 @@ const client = new Client({ node: "http://localhost:9200" }); // Create a new cl
  * @returns {Promise<void>} - A promise that resolves when the data is uploaded or rejects with an error
  */
 
+async function createIndex() {
+  await client.indices.create(
+    {
+      // Create a new index with the same name and our required mappings
+      index: "temp_index",
+      body: {
+        settings: {
+          analysis: {
+            analyzer: {
+              custom_edge_ngram_analyzer: {
+                // Create a custom ngram analyzer to tokenize the IDs
+                type: "custom",
+                tokenizer: "custom_edge_ngram_tokenizer",
+                filter: ["lowercase"], // Filter the tokens to lowercase
+              },
+              autocomplete_search: {
+                tokenizer: "lowercase",
+              },
+            },
+            tokenizer: {
+              custom_edge_ngram_tokenizer: {
+                // Tokenize the IDs into substrings of length 1 to 8
+                type: "edge_ngram",
+                min_gram: 1,
+                max_gram: 8,
+                token_chars: ["letter", "digit"],
+              },
+            },
+          },
+        },
+        mappings: {
+          properties: {
+            ID: {
+              // Allow the IDs to be searched on using the custom ngram analyzer
+              type: "text",
+              analyzer: "custom_edge_ngram_analyzer",
+              search_analyzer: "autocomplete_search",
+            },
+            Age: { type: "integer" },
+            Weight: { type: "integer" },
+            Height: { type: "integer" },
+            Glucose: { type: "double" },
+            Cholesterol: { type: "double" },
+            "Blood Pressure": { type: "integer" },
+            "Plasma Glucose Concentration": { type: "integer" },
+            Sex: { type: "keyword" },
+            Triglyceride: { type: "integer" },
+            Symptoms: {
+              // Allow the symptoms to be searched on
+              type: "text",
+              analyzer: "custom_edge_ngram_analyzer",
+              search_analyzer: "autocomplete_search",
+            },
+          },
+        },
+      },
+    },
+    { ignore: [400] }
+  ); // Ignore 400 errors
+}
+
 export default async function bulkUploadToElastic(formatted_data) {
   const formatted_data_json = JSON.parse(formatted_data); // Parse the JSON string into an object
 
-  console.log("json parsed");
+  console.log("JSON parsed");
 
   const exists1 = await client.indices.exists({ index: "temp_index" }); // Check if the temp_index index exists
 
   if (exists1) {
     // If the index exists
-    await client.indices.delete({ index: "temp_index" }); // Delete the index
-    console.log("index deleted");
-    await client.indices.create(
-      {
-        // Create a new index with the same name and our required mappings
-        index: "temp_index",
-        operations: {
-          mappings: {
-            properties: {
-              ID: { type: "integer" },
-              Age: { type: "integer" },
-              Weight: { type: "integer" },
-              Height: { type: "integer" },
-              Glucose: { type: "double" },
-              Cholesterol: { type: "double" },
-              "Blood Pressure": { type: "integer" },
-              "Plasma Glucose Concentration": { type: "integer" },
-              Sex: { type: "keyword" },
-              Triglyceride: { type: "integer" },
-              Symptoms: { type: "keyword" },
-            },
-          },
-        },
-      },
-      { ignore: [400] }
-    ); // Ignore 400 errors
+    await client.indices.delete({ index: "temp_index" }); // Delete the preexisiting temporary index
+    createIndex(); // Create a new temporary index
     console.log("index created");
   } else {
     // If the index does not exist
     console.log("index does not exist");
-    await client.indices.create(
-      {
-        // Create a new index with the same name and our required mappings
-        index: "temp_index",
-        operations: {
-          mappings: {
-            properties: {
-              ID: { type: "integer" },
-              Age: { type: "integer" },
-              Weight: { type: "integer" },
-              Height: { type: "integer" },
-              Glucose: { type: "double" },
-              Cholesterol: { type: "double" },
-              "Blood Pressure": { type: "integer" },
-              "Plasma Glucose Concentration": { type: "integer" },
-              Sex: { type: "keyword" },
-              Triglyceride: { type: "integer" },
-              Symptoms: { type: "keyword" },
-            },
-          },
-        },
-      },
-      { ignore: [400] }
-    ); // Ignore 400 errors
+    createIndex(); // Create a new temporary index after deleting the preexisting index
     console.log("index created");
   }
 

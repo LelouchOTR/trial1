@@ -9,6 +9,7 @@ function CustomHits(props: UseHitsProps) {
 
   // Return the JSX element that renders the table
   return (
+<<<<<<< Updated upstream
     <table>
       <tbody>
         {/* Add a heading row with the column names */}
@@ -22,6 +23,31 @@ function CustomHits(props: UseHitsProps) {
         {buildRows(hits)}
       </tbody>
     </table>
+=======
+    <div className="table-wrapper">
+      <table className="fl-table">
+        <tbody>
+          {/* Add a heading row with the column names */}
+          <tr className="header">
+            <td>ID</td>
+            <td>Age</td>
+            <td>Weight</td>
+            <td>Height</td>
+            <td>Glucose</td>
+            <td>Cholesterol</td>
+            <td>Blood Pressure</td>
+            <td>Body Fat</td>
+            <td>Sex</td>
+            <td>Triglyceride</td>
+            <td>Symptoms</td>
+          </tr>
+
+          {/* Call the buildRows function to generate the rows from the hits */}
+          {buildRows(hits)}
+        </tbody>
+      </table>
+    </div>
+>>>>>>> Stashed changes
   );
 }
 
