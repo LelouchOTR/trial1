@@ -75,7 +75,7 @@ export default function Search() {
 
       <InstantSearch // Create an InstantSearch component
         searchClient={searchClient} // Pass the search client as a prop
-        indexName="products" // Pass the index name as a prop
+        indexName="temp_index" // Pass the index name as a prop
       >
         <Head>
           {" "}
@@ -95,19 +95,14 @@ export default function Search() {
         />
         <div> Age {/*Create a div element for the price label*/} </div>
         <RangeInput
-          attribute="price" // Create a RangeInput component for the price attribute
+          attribute="Age" // Create a RangeInput component for the price attribute
         />
 
         <CustomHits
           hitComponent={hitView} // Create a Hits component with the custom hit component
         />
 
-<<<<<<< Updated upstream
-        <Pagination // Create a Pagination component
-=======
-        <Pagination
-          className="pagination" // Create a Pagination component
->>>>>>> Stashed changes
+        <Pagination className="pagination"// Create a Pagination component
         />
       </InstantSearch>
     </>

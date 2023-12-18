@@ -11,12 +11,6 @@ const apiConfig = {
     host: "http://localhost:9200", // Specify the host of the Elasticsearch server
   },
   search_settings: {
-<<<<<<< Updated upstream
-    search_attributes: ["name", "description"], // Specify the attributes to search on
-    result_attributes: ["name", "rating", "price", "popularity"], // Specify the attributes to return in the results
-    highlight_attributes: ["name", "price"], // Specify the attributes to highlight in the results
-    facet_attributes: [{ attribute: 'price', field: 'price', type: 'numeric' }], // Specify the attributes to facet on
-=======
     search_attributes: ["Symptoms"], // Specify the attributes to search on
     result_attributes: [
       "ID",
@@ -34,7 +28,6 @@ const apiConfig = {
     ], // Specify the attributes to return in the results
     highlight_attributes: ["ID"], // Specify the attributes to highlight in the results
     facet_attributes: [{ attribute: "Age", field: "Age", type: "numeric" }], // Specify the attributes to facet on
->>>>>>> Stashed changes
   },
 };
 
@@ -58,7 +51,10 @@ export async function POST(req: NextRequest, res: NextResponse) {
         },
       ];
     },
-  });
+  }
+  
+  );
+  console.log(results);
 
   // Return the results as JSON
   return NextResponse.json(results);
