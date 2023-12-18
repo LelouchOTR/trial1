@@ -6,7 +6,7 @@ const hitView = (props) => {
       <h2>
         <Highlight hit={props.hit} attribute="name" />
       </h2>
-      < br />
+      <br />
 
       <Highlight hit={props.hit} attribute="price" />
     </div>
