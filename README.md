@@ -1,24 +1,24 @@
 # Willkommen bei DWH_HEMATOLOGY
 
-DWH_HEMATOLOGY ist ein ambitioniertes Projekt, das darauf abzielt, die Datenanalyse in der Hämatologie, Hämostaseologie, Onkologie und Stammzelltransplantation zu verbessern. Unser Fokus liegt auf der Entwicklung eines benutzerfreundlichen Datawarehouses, das ohne Programmierkenntnisse die einfache Handhabung und Analyse medizinischer Daten ermöglicht.
+DWH_HEMATOLOGY is an ambitious project aimed at improving data analysis in hematology, hemostaseology, oncology, and stem cell transplantation. Our focus is on developing a user-friendly data warehouse that allows for easy handling and analysis of medical data without the need for programming skills.
 
-#### Unser Engagement für Exzellenz:
+#### Our commitment to excellence:
 
- - Unser Team strebt danach, eine wegweisende Lösung zu schaffen, die neue Maßstäbe setzt. Wir sind motiviert, engagiert und arbeiten intensiv daran, die Grenzen der medizinischen Datenanalyse zu erweitern.
+ - Our team strives to create a pioneering solution that sets new standards. We are motivated, dedicated, and work intensively to push the boundaries of medical data analysis.
 
-#### Unsere interne Motivation:
+#### Our internal motivation:
 
- - In unserem Team vereinen wir unsere Talente und unsere Leidenschaft für Innovation. Wir sind fest entschlossen, uns gegenseitig zu motivieren und das Beste aus unseren Fähigkeiten herauszuholen, um dieses Projekt zu einem Erfolg zu machen.
+ - In our team, we bring together our talents and our passion for innovation. We are firmly committed to motivating each other and bringing out the best in our abilities to make this project a success.
 
-#### Gemeinsam die Zukunft gestalten:
+#### Shaping the Future Together:
 
- - Wir dokumentieren unsere Fortschritte, um transparent und zugänglich zu bleiben. Innerhalb unseres Teams schaffen wir eine Umgebung, die unsere gemeinsame Vision für die Zukunft der medizinischen Datenanalyse unterstützt. Deine Unterstützung, Ideen und Expertise sind uns wertvoll, um dieses Ziel zu erreichen und das Projekt voranzutreiben.
-
-
+ - We document our progress to remain transparent and accessible. Within our team, we create an environment that supports our shared vision for the future of medical data analysis. Your support, ideas, and expertise are valuable to us in achieving this goal and advancing the project.
 
 
 
-## Themenübersicht
+
+
+## Topics
 
 
 * [Projektinhalt und Ziele](https://github.com/health-io/2023-6a/tree/5157ee6f25184b2d91f290500488a6b2ca0390eb/docs/Projektinhalt_und_Ziele)
