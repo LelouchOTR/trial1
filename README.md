@@ -1,4 +1,4 @@
-# Willkommen bei DWH_HEMATOLOGY
+# Welcome to DWH_HEMATOLOGY
 
 DWH_HEMATOLOGY is an ambitious project aimed at improving data analysis in hematology, hemostaseology, oncology, and stem cell transplantation. Our focus is on developing a user-friendly data warehouse that allows for easy handling and analysis of medical data without the need for programming skills.
 
