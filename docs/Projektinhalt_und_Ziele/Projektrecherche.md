@@ -2,9 +2,9 @@
 
 How we built the Internal Data Warehouse at ClickHouse
 What Is ClickHouse? | ClickHouse Docs
-- kostenfreie Basisversion
-- Preise kapazität abhängig
-- Stundenpreise für Rechenleistung
+- Free Basic Version
+- Pricing based on capacity
+- Hourly pay rates for computing power
 - local host
 - Column oriented
 - compatible with most editors
@@ -13,22 +13,21 @@ What Is ClickHouse? | ClickHouse Docs
 
 # Snowflake
 
-- wird schon für medizinische Anwendungen verwendet
+- Already used for medical applications
 - Data Lake
 - Data cloud
 - SQL based visualizes data when queried 
-- eventuell höhere Datensicherheit
-- viele Möglichkeiten zur (KI-)Auswertung
-- günstigstes 4 USD/ credit
-- credits pro stunde
-- eventuell sehr hohe Preise
+- Potentially higher data security
+- Many possibilities for (AI) analysis
+- Lowest cost: $4/credit
+- credits per houer
+- Potentially very high prices
 
 
 # Elasticsearch
 
-- flexible struktur
+- Flexible structure
 - JASON based DS
 - No SQL data Sources
 - neue Messwerte leicht zu integrieren
-- 95 USD/ monat oder auch gratis möglich
-
+- 95 USD per month or possibly free
