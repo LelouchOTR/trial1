@@ -33,36 +33,35 @@ DWH_HEMATOLOGY is an ambitious project aimed at improving data analysis in hemat
 
 ## Projektmanagement
 
-Die aktuellen To Dos sind in dem Reiter [Issues](https://github.com/health-io/2023-6a/issues) zu finden:
+The current 'To Dos' can be found in the [Issues](https://github.com/health-io/2023-6a/issues) tab:
  
 
 
-### Rolleneinteilung
-* Beutel Gernot (MHH): Projekt Inhaber
-* Geerits Eline: Projekt Maneger
-* Mohammad Muneeb: Entwickler
-* Lelke Thies: Entwickler
-* Lösekrug Julia: Anforderungsmanegment
-* Weßel Patricia: Anforderungsmanegment
-* Kirstein Janka: Dokumentationsmanegmet
-* Daecke Niklas: Dokumentationsmanegmet
+### Assignment of Roles
+* Beutel Gernot (MHH): Project Owner
+* Geerits Eline: Project Manager
+* Mohammad Muneeb: Developer
+* Lelke Thies: Developer
+* Lösekrug Julia: Requirements Management
+* Weßel Patricia: Requirements Management
+* Kirstein Janka: Documentation Management
+* Daecke Niklas: Documentation Management
 * Wiechers Lara (MHH):
 
 
-## Übersicht über Grundidee
+## Basic Idea
 
-Für ein einfaches Verständnis über die Idee/Ziele dieses Projekts sind hier die Userstory und eine erste Idee eines möglichen Frontend für eine einfache Nutzung des DWH dargestellt. 
+For a simple understanding of the idea/goals of this project, here are the user story and an initial concept of a possible frontend for easy use of the data warehouse (DWH).
 
 ### Userstory
 
-Durch das Projekt soll es möglich sein, alle zu einem Patienten gesammelten Daten zusammenzufügen und gemeinsam zu speichern. 
-Benötigt ein Arzt zu einem späteren Zeitpunkt die Daten oder auch nur einen Teil davon, kann er sich diese über ein intuitiv zu bedienenen Frondend ausgeben lassen. 
+The project aims to aggregate and store all data collected for a patient. If a doctor needs the data or even just a part of it at a later time, they can retrieve it through an intuitively designed frontend.
 
 ![alt text](docs/user-story.png)
 
 ### Frontend
 
-Eine Idee für ein Frondend für die intuitive Nutzung ist hier dargestellt. Inwieweit dies umgesetzt werden kann muss im laufe des Projekts geklärt werden.
+An idea for an intuitive frontend is presented here. The extent to which this can be implemented will need to be clarified as the project progresses.
 
 ![alt text](docs/erster-entwurf-frontend.jpeg)
 
