@@ -33,7 +33,7 @@ DWH_HEMATOLOGY is an ambitious project aimed at improving data analysis in hemat
 
 ## Projektmanagement
 
-The current 'To Dos' can be found in the [Issues](https://github.com/health-io/2023-6a/issues) tab:
+The current 'To Dos' can be found in the [Issues](https://github.com/health-io/2023-6a/issues) tab.
  
 
 
