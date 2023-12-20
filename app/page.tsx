@@ -59,11 +59,18 @@ export default function Search() {
 
         <RefinementList attribute='free_shipping' // Create a RefinementList component for the free_shipping attribute 
         />
+<<<<<<< Updated upstream
         <div> Price {/*Create a div element for the price label*/} </div>
         <RangeInput attribute="price" // Create a RangeInput component for the price attribute 
         />
         <Hits hitComponent={hitView} // Create a Hits component with the custom hit component 
         />
+=======
+        <div> Age {/*Create a div element for the price label*/} </div>
+        <RangeInput
+          attribute="Age" // Create a RangeInput component for the price attribute
+        />sdf
+>>>>>>> Stashed changes
 
       </InstantSearch>
 
