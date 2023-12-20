@@ -59,7 +59,7 @@ For a simple understanding of the idea/goals of this project, here are the requi
 - each patient has an ID and data is assigned to it
 - If data is added later, it should expand the existing data
 - The data warehouse originally consists of fixed attributes/columns, but must be automatically expanded when new data is added 
-- Data can be numerical values (e.g. blood count) but can also consist of words/texts
+- Data can be numerical values (e.g. blood count) but can also consist of words/texts and pictures
 - It should later be possible for a doctor to use the desired data intuitively 
 - Selection of various attributes and output of all patient data containing data for these attributes
 - Search for an individual patient and output the associated data 
