@@ -41,9 +41,9 @@ The current 'To Dos' can be found in the [Issues](https://github.com/health-io/2
 * Beutel Gernot (MHH): Project Owner
 * Geerits Eline: Project Manager
 * Mohammad Muneeb: Developer
+* Weßel Patricia: Developer
 * Lelke Thies: Developer
 * Lösekrug Julia: Requirements Management
-* Weßel Patricia: Developer
 * Kirstein Janka: Documentation Management
 * Daecke Niklas: Documentation Management
 * Wiechers Lara (MHH)
