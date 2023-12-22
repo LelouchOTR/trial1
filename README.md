@@ -43,7 +43,7 @@ The current 'To Dos' can be found in the [Issues](https://github.com/health-io/2
 * Mohammad Muneeb: Developer
 * Lelke Thies: Developer
 * Lösekrug Julia: Requirements Management
-* Weßel Patricia: Requirements Management
+* Weßel Patricia: Developer
 * Kirstein Janka: Documentation Management
 * Daecke Niklas: Documentation Management
 * Wiechers Lara (MHH)
