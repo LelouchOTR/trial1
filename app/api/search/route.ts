@@ -44,6 +44,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
         {
           multi_match: {
             query: query.toLowerCase(), // Filter the input query to lowercase
+            //type: "bool_prefix", // Allows the query to match on a prefix of the input query
             type: "bool_prefix", // Allows the query to match on a prefix of the input query
             analyzer: "keyword", // Use the keyword analyzer to match on the entire input query
             fields: ["ID", "Symptoms"], // Specify the fields to search on
