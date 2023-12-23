@@ -20,7 +20,7 @@ async function readUploadFile(e) {
       const sheetName = workbook.SheetNames[0]; // Get the name of the first sheet
       const worksheet = workbook.Sheets[sheetName]; // Get the worksheet object
       const json1 = xlsx.utils.sheet_to_json(worksheet); // Convert the worksheet to JSON
-      console.log(json1); // Log the JSON to the console
+      // console.log("JSON "+json1); // Log the JSON to the console
       const operations = json1.flatMap((doc) => [
         { index: { _index: "temp_index" } },
         doc,

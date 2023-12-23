@@ -1,6 +1,7 @@
 "use server";
 
-import index_module from "./index-module";
+import { get } from "http";
+//import getFieldMapping from "./get-field-mapping";
 
 const { Client } = require("@elastic/elasticsearch"); // Import the Client class from the @elastic/elasticsearch module
 const client = new Client({ node: "http://localhost:9200" }); // Create a new client instance that connects to the local node
@@ -10,6 +11,8 @@ const client = new Client({ node: "http://localhost:9200" }); // Create a new cl
  * @param {string} formatted_data - The formatted data as a JSON string
  * @returns {Promise<void>} - A promise that resolves when the data is uploaded or rejects with an error
  */
+
+
 
 const mapping = {
   settings: {
@@ -55,7 +58,7 @@ const mapping = {
             type: "long",
           },
         },
-      }
+      },
     ],
     properties: {
       details: {
@@ -129,7 +132,7 @@ async function createIndex() {
 
 export default async function bulkUploadToElastic(formatted_data) {
   const formatted_data_json = JSON.parse(formatted_data); // Parse the JSON string into an object
-
+  // console.log(formatted_data_json);
   console.log("JSON parsed");
 
   const exists1 = await client.indices.exists({ index: "temp_index" }); // Check if the temp_index index exists
@@ -138,12 +141,12 @@ export default async function bulkUploadToElastic(formatted_data) {
     // If the index exists
     await client.indices.delete({ index: "temp_index" }); // Delete the preexisiting temporary index
     createIndex(); // Create a new temporary index
-    console.log("index created");
+    console.log("Index created");
   } else {
     // If the index does not exist
-    console.log("index does not exist");
+    console.log("Index does not exist");
     createIndex(); // Create a new temporary index after deleting the preexisting index
-    console.log("index created");
+    console.log("Index created");
   }
 
   const bulkResponse = await client.bulk({
@@ -178,4 +181,8 @@ export default async function bulkUploadToElastic(formatted_data) {
 
   const count = await client.count({ index: "temp_index" }); // Get the document count of the index
   console.log("count: ", count); // Log the count
+
+  //const a1 = getFieldMapping().then((fields_in_node) => {const a2=fields_in_node;});
+  //console.log("getFieldMapping called");
+  
 }

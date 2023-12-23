@@ -4,6 +4,9 @@ import Client from "@searchkit/api";
 import { createContext } from "react";
 // Import the NextRequest and NextResponse types from next/server
 import { NextRequest, NextResponse } from "next/server";
+import getFieldMapping from "@/app/modules/get-field-mapping";
+
+// const fieldMappings = getFieldMapping().then((fields_in_node) => {console.log(fields_in_node);});
 
 // Define the api configuration object
 const apiConfig = {
@@ -11,7 +14,7 @@ const apiConfig = {
     host: "http://localhost:9200", // Specify the host of the Elasticsearch server
   },
   search_settings: {
-    search_attributes: ["Symptoms"], // Specify the attributes to search on
+    search_attributes: ["ID"], // Specify the attributes to search on
     result_attributes: [
       "ID",
       "Age",
@@ -26,6 +29,7 @@ const apiConfig = {
       "Triglyceride",
       "Symptoms",
     ], // Specify the attributes to return in the results
+    // result_attributes: fieldMappings, // Specify the attributes to return in the results
     highlight_attributes: ["ID"], // Specify the attributes to highlight in the results
     facet_attributes: [{ attribute: "Age", field: "Age", type: "numeric" }], // Specify the attributes to facet on
   },
@@ -47,15 +51,13 @@ export async function POST(req: NextRequest, res: NextResponse) {
             //type: "bool_prefix", // Allows the query to match on a prefix of the input query
             type: "bool_prefix", // Allows the query to match on a prefix of the input query
             analyzer: "keyword", // Use the keyword analyzer to match on the entire input query
-            fields: ["ID", "Symptoms"], // Specify the fields to search on
+            //fields: ["ID", "Symptoms"], // Specify the fields to search on
           },
         },
       ];
     },
-  }
-  
-  );
-  console.log(results);
+  });
+  // console.log(results);
 
   // Return the results as JSON
   return NextResponse.json(results);

@@ -20,7 +20,7 @@ import CustomHits from "./components/custom-hits"; // Import the custom hits com
 import { useRef } from "react"; // Import the useRef hook from react to create a reference to the input element
 
 import { ResetInputButton } from "./components/reset-input-button"; // Import the ResetInputButton component
-
+import response1 from "./modules/get-field-mapping";
 // import { Button, ButtonGroup } from "@nextui-org/react";
 // import Hit from "./components/Hit";
 // import * as opensearch from '@opensearch-project/opensearch'; // Import the opensearch module
@@ -42,6 +42,7 @@ export default function Search() {
   function handleReset(e) {
     // Create a function to clear the input element when the reset button is clicked
     e.preventDefault();
+
     if (inputFile.current) {
       inputFile.current.value = "";
       inputFile.current.type = "text";
@@ -102,7 +103,8 @@ export default function Search() {
           hitComponent={hitView} // Create a Hits component with the custom hit component
         />
 
-        <Pagination className="pagination"// Create a Pagination component
+        <Pagination
+          className="pagination" // Create a Pagination component
         />
       </InstantSearch>
     </>
