@@ -4,9 +4,12 @@ import Client from "@searchkit/api";
 import { createContext } from "react";
 // Import the NextRequest and NextResponse types from next/server
 import { NextRequest, NextResponse } from "next/server";
-import getFieldMapping from "@/app/modules/get-field-mapping";
+import fields_in_node from "@/app/modules/get-field-mapping";
 
-// const fieldMappings = getFieldMapping().then((fields_in_node) => {console.log(fields_in_node);});
+//const fieldMappings = getFieldMapping().then((fields_in_node) => {console.log(fields_in_node);});
+
+
+console.log(fields_in_node);
 
 // Define the api configuration object
 const apiConfig = {
@@ -15,22 +18,22 @@ const apiConfig = {
   },
   search_settings: {
     search_attributes: ["ID"], // Specify the attributes to search on
-    result_attributes: [
-      "ID",
-      "Age",
-      "Weight",
-      "Height",
-      "Glucose",
-      "Cholesterol",
-      "Body Fat",
-      "Blood Pressure",
-      "Plasma Glucose Concentration",
-      "Sex",
-      "Triglyceride",
-      "Symptoms",
-    ], // Specify the attributes to return in the results
-    // result_attributes: fieldMappings, // Specify the attributes to return in the results
-    highlight_attributes: ["ID"], // Specify the attributes to highlight in the results
+    // result_attributes: [
+    //   "ID",
+    //   "Age",
+    //   "Weight",
+    //   "Height",
+    //   "Glucose",
+    //   "Cholesterol",
+    //   "Body Fat",
+    //   "Blood Pressure",
+    //   "Plasma Glucose Concentration",
+    //   "Sex",
+    //   "Triglyceride",
+    //   "Symptoms",
+    // ], // Specify the attributes to return in the results
+    result_attributes: fields_in_node, // Specify the attributes to return in the results
+    highlight_attributes: fields_in_node, // Specify the attributes to highlight in the results
     facet_attributes: [{ attribute: "Age", field: "Age", type: "numeric" }], // Specify the attributes to facet on
   },
 };
