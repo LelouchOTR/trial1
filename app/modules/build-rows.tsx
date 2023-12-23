@@ -11,6 +11,7 @@ function buildRows(hits) {
         <td>{hit.Height|| "-"}</td>
         <td>{hit.Glucose || "-"}</td>
         <td>{hit.Cholesterol|| "-"}</td>
+        <td>{hit["Plasma Glucose Concentration"]}</td>
         <td>{hit["Blood Pressure"]|| "-"}</td>
         <td>{hit["Body Fat"]|| "-"}</td>
         <td>{hit.Sex|| "-"}</td>

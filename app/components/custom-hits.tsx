@@ -1,20 +1,24 @@
 // Import the useHits hook and the UseHitsProps type from react-instantsearch
 import { useHits, UseHitsProps } from "react-instantsearch";
 import buildRows from "../modules/build-rows";
+import fields_in_node from "../modules/get-field-mapping";
+
+console.log(fields_in_node);
 
 // Define a custom component that renders a table of hits
 function CustomHits(props: UseHitsProps) {
   // Get the hits and the sendEvent function from the useHits hook
   const { hits, sendEvent } = useHits(props);
-
+  const headings = fields_in_node;
   // Return the JSX element that renders the table
   return (
-    <div className="table-wrapper">
+    <>
+    // <div className="table-wrapper">
       <table className="fl-table">
-        <tbody>
+        <thead>
           {/* Add a heading row with the column names */}
           <tr className="header">
-            <td>ID</td>
+            {/* <td>ID</td>
             <td>Age</td>
             <td>Weight</td>
             <td>Height</td>
@@ -24,14 +28,18 @@ function CustomHits(props: UseHitsProps) {
             <td>Body Fat</td>
             <td>Sex</td>
             <td>Triglyceride</td>
-            <td>Symptoms</td>
+            <td>Symptoms</td> */}
+            
+            {headings.map((heading) => (<th key={heading}>{heading}</th>))}
           </tr>
-
+        </thead>
+        <tbody>
           {/* Call the buildRows function to generate the rows from the hits */}
           {buildRows(hits)}
         </tbody>
       </table>
-    </div>
+    // </div>
+    </>
   );
 }
 

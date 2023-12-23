@@ -11,7 +11,9 @@ async function getFieldMapping() {
   for (const field in mapping["temp_index"]["mappings"]["properties"]) {
     // Iterate over the fields in the mapping
     fields_in_node.push(field.toString()); // Push the field to the array
+    console.log(field);
   }
+  
   return fields_in_node;
 }
 
