@@ -53,20 +53,27 @@ export default function Search() {
 
   return (
     <>
-      <form>
-        {/* Create a form element */}
-        <label htmlFor="upload">Upload File</label>
-        {/* Create a label for the file input */}
-        <input
-          type="file" // Specify the input type as file
-          name="upload" // Specify the input name as upload
-          id="upload" // Specify the input id as upload
-          ref={inputFile}
-          onChange={readUploadFile} // Specify the onChange handler as the readUploadFile function
-        />
-        <NextUIProvider>
+      <NextUIProvider>
+        <form>
+          {/* Create a form element */}
+          <label
+            htmlFor="upload"
+            className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1"
+          >
+            Upload File{" "}
+          </label>
+          {/* Create a label for the file input */}
+          <input
+            type="file" // Specify the input type as file
+            name="upload" // Specify the input name as upload
+            id="upload" // Specify the input id as upload
+            ref={inputFile}
+            onChange={readUploadFile} // Specify the onChange handler as the readUploadFile function
+            className="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+          />
+
           <Button
-            className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"
+            className=""
             variant="ghost"
             onClick={(e) => {
               handleReset(e);
@@ -74,8 +81,8 @@ export default function Search() {
           >
             Reset Input
           </Button>
-        </NextUIProvider>
-      </form>
+        </form>
+      </NextUIProvider>
 
       <InstantSearch // Create an InstantSearch component
         searchClient={searchClient} // Pass the search client as a prop
@@ -96,13 +103,12 @@ export default function Search() {
 
         <SearchBox
           placeholder="Search IDs"
-          
           autoFocus
           classNames={{
             root: "p-3 shadow-sm",
             form: "relative",
             input:
-              "block w-full pl-9 pr-3 py-2 bg-transparent border border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 rounded-md focus:ring-1",
+              "block w-auto pl-9 pr-3 py-2 bg-transparent border border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 rounded-md focus:ring-1",
           }}
         />
 
@@ -128,7 +134,6 @@ export default function Search() {
           className="pagination" // Create a Pagination component
         />
       </InstantSearch>
-      
     </>
   );
 }

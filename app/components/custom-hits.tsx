@@ -82,40 +82,8 @@ function CustomHits(props: UseHitsProps) {
     // Return the JSX element that renders the table
 
     return (
-      //   <>
-      //   <div className="table-wrapper">
-      //     <table className="fl-table">
-      //       <thead>
-      //         {/* Add a heading row with the column names */}
-      //         <tr className="header">
-      //           {/* <td>ID</td>
-      //           <td>Age</td>
-      //           <td>Weight</td>
-      //           <td>Height</td>
-      //           <td>Glucose</td>
-      //           <td>Cholesterol</td>
-      //           <td>Blood Pressure</td>
-      //           <td>Body Fat</td>
-      //           <td>Sex</td>
-      //           <td>Triglyceride</td>
-      //           <td>Symptoms</td> */}
-
-      //           {headings.map((heading) => (<th key={heading}>{heading}</th>))}
-      //         </tr>
-      //       </thead>
-      //       <tbody>
-      //         {/* Call the buildRows function to generate the rows from the hits */}
-      //         {buildRows(hits)}
-      //       </tbody>
-      //     </table>
-      //   </div>
-      //   </>
-
       <NextUIProvider>
-        <Table
-          aria-label="Example table with dynamic content"
-          className="bg-black"
-        >
+        <Table aria-label="Example table with dynamic content" isStriped>
           <TableHeader columns={columns}>
             {(column) => (
               <TableColumn key={column.key}>{column.label}</TableColumn>
@@ -140,10 +108,7 @@ function CustomHits(props: UseHitsProps) {
 
     return (
       <NextUIProvider>
-        <Table
-          aria-label="Example table with dynamic content"
-          className="bg-black"
-        >
+        <Table aria-label="Example table with dynamic content" isStriped>
           <TableHeader columns={columns}>
             {(column) => (
               <TableColumn key={column.key}>{column.label}</TableColumn>
