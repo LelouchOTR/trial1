@@ -1,6 +1,5 @@
 "use server";
-
-import { get } from "http";
+import { revalidatePath } from "next/cache";
 
 const { Client } = require("@elastic/elasticsearch"); // Import the Client class from the @elastic/elasticsearch module
 const client = new Client({ node: "http://localhost:9200" }); // Create a new client instance that connects to the local node
@@ -131,4 +130,5 @@ export default async function bulkUploadToElastic(formatted_data) {
 
   const count = await client.count({ index: "temp_index" }); // Get the document count of the index
   console.log("count: ", count); // Log the count
+  revalidatePath('/','layout'); // Refresh the data, currently does not work
 }

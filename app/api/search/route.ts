@@ -13,20 +13,6 @@ const apiConfig = {
   },
   search_settings: {
     search_attributes: ["ID"], // Specify the attributes to search on
-    // result_attributes: [
-    //   "ID",
-    //   "Age",
-    //   "Weight",
-    //   "Height",
-    //   "Glucose",
-    //   "Cholesterol",
-    //   "Body Fat",
-    //   "Blood Pressure",
-    //   "Plasma Glucose Concentration",
-    //   "Sex",
-    //   "Triglyceride",
-    //   "Symptoms",
-    // ], // Specify the attributes to return in the results
     result_attributes: fields_in_node, // Specify the attributes to return in the results
     highlight_attributes: fields_in_node, // Specify the attributes to highlight in the results
     facet_attributes: [{ attribute: "Age", field: "Age", type: "numeric" }], // Specify the attributes to facet on
@@ -46,10 +32,8 @@ export async function POST(req: NextRequest, res: NextResponse) {
         {
           multi_match: {
             query: query.toLowerCase(), // Filter the input query to lowercase
-            //type: "bool_prefix", // Allows the query to match on a prefix of the input query
             type: "bool_prefix", // Allows the query to match on a prefix of the input query
             analyzer: "keyword", // Use the keyword analyzer to match on the entire input query
-            //fields: ["ID", "Symptoms"], // Specify the fields to search on
           },
         },
       ];

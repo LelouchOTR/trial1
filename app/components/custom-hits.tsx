@@ -19,6 +19,7 @@ function CustomHits(props: UseHitsProps) {
   const { hits, sendEvent } = useHits(props);
 
   if (hits.length == 0) {
+    // If there are no hits, return a table with a single row of empty values with arbitrary column names
     const hits = [
       {
         ID: "-",
@@ -36,7 +37,8 @@ function CustomHits(props: UseHitsProps) {
       },
     ];
     const columns = [];
-    const columns1 = [
+    const column_array = [
+      // Define the arbitrary column names for rendering the empty table
       "ID",
       "Age",
       "Weight",
@@ -50,11 +52,12 @@ function CustomHits(props: UseHitsProps) {
       "Triglyceride",
       "Symptoms",
     ];
-    for (let i = 0; i < columns1.length; i++) {
-      columns.push({ key: columns1[i], label: columns1[i] });
+    for (let i = 0; i < column_array.length; i++) {
+      // Build the columns from the column names for NextUI formatting
+      columns.push({ key: column_array[i], label: column_array[i] });
     }
 
-    const rows = [];
+    const rows = []; // Build the rows array from the arbitrary hits for NextUI formatting
     for (let i = 0; i < hits.length; i++) {
       rows.push({
         key: i,
@@ -72,27 +75,29 @@ function CustomHits(props: UseHitsProps) {
         Symptoms: hits[i].Symptoms,
       });
     }
-    // console.log("columns: " + columns);
-    // console.log("rows: " + rows);
-    // console.log("hits: " + hits);
-    // console.log("hits length: " + hits.length);
 
     // Get the hits and the sendEvent function from the useHits hook
 
     // Return the JSX element that renders the table
 
     return (
+      // Wrap the table inside the NextUIProvider component
       <NextUIProvider>
+        {/* Use the Table component from the NextUI library */}
         <Table aria-label="Example table with dynamic content" isStriped>
           <TableHeader columns={columns}>
+            {/* Use a function to map each column object to a TableColumn component */}
             {(column) => (
               <TableColumn key={column.key}>{column.label}</TableColumn>
             )}
           </TableHeader>
           <TableBody items={rows}>
             {(item) => (
+              // Use a function to map each row object to a TableRow component
               <TableRow key={item.key}>
+                {/* Use a function to map each column key to a TableCell component */}
                 {(columnKey) => (
+                  // Use the getKeyValue function to get the value from the row object by the column key
                   <TableCell>{getKeyValue(item, columnKey)}</TableCell>
                 )}
               </TableRow>
@@ -102,22 +107,29 @@ function CustomHits(props: UseHitsProps) {
       </NextUIProvider>
     );
   } else {
+    // If there are hits, build the rows and columns from the hits
     const { rows, columns } = buildRowsAndColumns(hits);
 
     // Return the JSX element that renders the table
 
     return (
+      // Wrap the table inside the NextUIProvider component
       <NextUIProvider>
+        {/* Use the Table component from the NextUI library */}
         <Table aria-label="Example table with dynamic content" isStriped>
           <TableHeader columns={columns}>
+            {/* Use a function to map each column object to a TableColumn component */}
             {(column) => (
               <TableColumn key={column.key}>{column.label}</TableColumn>
             )}
           </TableHeader>
           <TableBody items={rows}>
             {(item) => (
+              // Use a function to map each row object to a TableRow component
               <TableRow key={item.key}>
+                {/* Use a function to map each column key to a TableCell component */}
                 {(columnKey) => (
+                  // Use the getKeyValue function to get the value from the row object by the column key
                   <TableCell>{getKeyValue(item, columnKey)}</TableCell>
                 )}
               </TableRow>
