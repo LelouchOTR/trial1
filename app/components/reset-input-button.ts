@@ -3,7 +3,7 @@ export const ResetInputButton = {
     padding: "10px 10px 10px 10px",
     border: "none",
     borderRadius: "8px",
-    backgroundColor: "#dca765",
+    backgroundColor: "#3ddbac",
     color: "#fff",
     fontSize: "1rem",
     cursor: "pointer",

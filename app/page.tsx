@@ -21,7 +21,8 @@ import { useRef } from "react"; // Import the useRef hook from react to create a
 
 import { ResetInputButton } from "./components/reset-input-button"; // Import the ResetInputButton component
 import response1 from "./modules/get-field-mapping";
-// import { Button, ButtonGroup } from "@nextui-org/react";
+import { Button, ButtonGroup, NextUIProvider } from "@nextui-org/react";
+import { ThemeSwitcher } from "./components/theme-switcher";
 // import Hit from "./components/Hit";
 // import * as opensearch from '@opensearch-project/opensearch'; // Import the opensearch module
 // const { searchClient } = require('@opensearch-project/opensearch');
@@ -53,9 +54,8 @@ export default function Search() {
   return (
     <>
       <form>
-        {" "}
         {/* Create a form element */}
-        <label htmlFor="upload">Upload File</label>{" "}
+        <label htmlFor="upload">Upload File</label>
         {/* Create a label for the file input */}
         <input
           type="file" // Specify the input type as file
@@ -64,14 +64,17 @@ export default function Search() {
           ref={inputFile}
           onChange={readUploadFile} // Specify the onChange handler as the readUploadFile function
         />
-        <button // Create a button to reset the input
-          style={ResetInputButton}
-          onClick={(e) => {
-            handleReset(e);
-          }}
-        >
-          Reset Input
-        </button>
+        <NextUIProvider>
+          <Button
+            className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"
+            variant="ghost"
+            onClick={(e) => {
+              handleReset(e);
+            }}
+          >
+            Reset Input
+          </Button>
+        </NextUIProvider>
       </form>
 
       <InstantSearch // Create an InstantSearch component
@@ -83,20 +86,38 @@ export default function Search() {
           {/*Create a Head component*/}
           <link
             rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/instantsearch.css@7/themes/satellite-min.css" // Link to the instantsearch.css stylesheet
+            href="https://cdn.jsdelivr.net/npm/instantsearch.css@8.1.0/themes/satellite.css" // Link to the instantsearch.css stylesheet
           />
         </Head>
-        <SearchBox
+        {/* <SearchBox
           placeholder="Search IDs"
           autoFocus // Create a SearchBox component
+        /> */}
+
+        <SearchBox
+          placeholder="Search IDs"
+          
+          autoFocus
+          classNames={{
+            root: "p-3 shadow-sm",
+            form: "relative",
+            input:
+              "block w-full pl-9 pr-3 py-2 bg-transparent border border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 rounded-md focus:ring-1",
+          }}
         />
 
-        <RefinementList
+        {/* <RefinementList
           attribute="free_shipping" // Create a RefinementList component for the free_shipping attribute
-        />
+        /> */}
         <div> Age {/*Create a div element for the price label*/} </div>
         <RangeInput
           attribute="Age" // Create a RangeInput component for the price attribute
+          classNames={{
+            root: "p-3 shadow-sm",
+            form: "relative",
+            input:
+              "block w-auto text-center pl-9 pr-3 py-2 bg-transparent border border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 rounded-md focus:ring-1",
+          }}
         />
 
         <CustomHits
@@ -107,6 +128,7 @@ export default function Search() {
           className="pagination" // Create a Pagination component
         />
       </InstantSearch>
+      
     </>
   );
 }

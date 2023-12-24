@@ -6,8 +6,6 @@ import { createContext } from "react";
 import { NextRequest, NextResponse } from "next/server";
 import fields_in_node from "@/app/modules/get-field-mapping";
 
-console.log(fields_in_node);
-
 // Define the api configuration object
 const apiConfig = {
   connection: {
