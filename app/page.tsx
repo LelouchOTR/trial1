@@ -60,12 +60,10 @@ export default function Search() {
       <NextUIProvider>
         <form>
           {/* Create a form element */}
-          <label
-            htmlFor="upload"
-            className="relative text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1"
-          >
+          <label htmlFor="upload" className="hidden">
             Upload File
           </label>
+
           {/* Create a label for the file input */}
           <input
             type="file" // Specify the input type as file
@@ -73,28 +71,29 @@ export default function Search() {
             id="upload" // Specify the input id as upload
             ref={inputFile}
             onChange={readUploadFile} // Specify the onChange handler as the readUploadFile function
-            className="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+            className="inline-flex w-auto mt-2 mb-2 px-4 pt-3 text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-sky-50 file:text-sky-700 hover:file:bg-sky-100"
           />
-          <Button // Button to refresh the data in the displayed table, currently not working
-            className="w-auto mt-2"
-            variant="ghost"
-            onClick={() => {
-              handleRefresh();
-            }}
-          >
-            Load Data
-          </Button>
-
-          <Button // Button to reset the input element
-            className="mt-2"
-            variant="ghost"
-            onClick={(e) => {
-              handleReset(e);
-            }}
-          >
-            Reset Input
-          </Button>
         </form>
+
+        <Button // Button to refresh the data in the displayed table, currently not working
+          className="w-auto ml-4 mt-2 inline-flex"
+          variant="ghost"
+          onClick={() => {
+            handleRefresh();
+          }}
+        >
+          Refresh View
+        </Button>
+
+        <Button // Button to reset the input element
+          className="w-auto ml-2 mt-2 inline-flex"
+          variant="ghost"
+          onClick={(e) => {
+            handleReset(e);
+          }}
+        >
+          Reset Input
+        </Button>
 
         <InstantSearch // Create an InstantSearch component
           searchClient={searchClient} // Pass the search client as a prop
@@ -113,12 +112,13 @@ export default function Search() {
             placeholder="Search IDs"
             autoFocus
             classNames={{
-              root: "p-3 shadow-sm",
-              form: "relative",
+              root: "p-4 shadow-sm",
+              form: "",
               input:
-                "block w-auto pl-9 pr-3 py-2 bg-transparent border border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 rounded-md focus:ring-1",
+                "inline-flex w-auto pl-9 pr-3 py-2 bg-transparent border border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 rounded-md focus:ring-1",
               submit:
-                "inline-flex py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700",
+                "inline-flex w-auto py-3 px-5 ml-2 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-sky-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700",
+              loadingIcon: "inline-flex items-center",
             }}
           />
 
@@ -128,21 +128,22 @@ export default function Search() {
 
           <label
             id="Age"
-            className="relative text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1"
+            className="relative text-sm text-gray-500 dark:text-gray-400 vertical-align:middle duration-300 transform -translate-y-4 scale-75 bg-white dark:bg-gray-900 ml-4 peer-focus:px-2 peer-focus:text-sky-600 peer-focus:dark:text-sky-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1"
           >
             Age
           </label>
           <RangeInput
             id="Age"
             attribute="Age" // Create a RangeInput component for the price attribute
+            precision={2} // Specify the precision
             classNames={{
-              root: "p-3 shadow-sm",
+              root: "pl-3 shadow-sm inline-flex",
               form: "relative",
               input:
-                "w-auto text-center pl-9 pr-3 py-2 bg-transparent border border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 rounded-md focus:ring-1",
+                "w-auto text-center pl-3 pr-0 py-2 bg-transparent border border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 rounded-md focus:ring-1",
               separator: "text-slate-500 px-2 text-center",
               submit:
-                "py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700",
+                "py-2.5 px-5 ml-2 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-sky-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700",
             }}
           />
 
@@ -152,16 +153,16 @@ export default function Search() {
 
           <Pagination // Create a Pagination component
             classNames={{
-              root: "flex w-full justify-center py-5",
+              root: "flex w-auto justify-center py-5",
               list: "flex gap-0 justify-center",
               item: "flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white",
               selectedItem:
-                "flex items-center justify-center px-3 h-8 text-slate-600 border border-gray-300 bg-blue-50 hover:bg-slate-100 hover:text-slate-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white",
+                "flex items-center justify-center px-3 h-8 text-slate-600 border border-gray-300 bg-sky-100 hover:bg-slate-100 hover:text-sky-700 dark:border-gray-700 dark:bg-sky-700 dark:text-white",
               firstPageItem: "p-3 shadow-sm",
               lastPageItem: "p-3 shadow-sm",
               pageItem: "p-3 shadow-sm",
-              previousPageItem: "p-3 shadow-sm",
-              nextPageItem: "p-3 shadow-sm",
+              previousPageItem: "p-0 shadow-sm",
+              nextPageItem: "p-0 shadow-sm",
             }}
           />
         </InstantSearch>
