@@ -41,3 +41,21 @@ export async function POST(req: NextRequest, res: NextResponse) {
 
   return NextResponse.json(results) // Return the results as JSON
 }
+
+
+// Assuming this is an object or interface definition
+const yourObject = {
+  // ... previous code
+  filter_attributes: [
+    { attribute: 'descriptionr', field: 'description.keyword', type: 'string' },
+    { attribute: 'price', field: 'price', type: 'numeric' },
+  ],
+  filter_attributes: [
+    { attribute: 'name', field: 'name.keyword', type: 'string' },
+    { attribute: 'description', field: 'description.keyword', type: 'string' },
+    { attribute: 'categories', field: 'categories.keyword', type: 'string' },
+    { attribute: 'price', field: 'price.keyword', type: 'numeric' }
+  ],
+  result_attributes: [],
+  search_attributes: []
+};
