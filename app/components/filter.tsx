@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Configure, InstantSearch } from 'react-instantsearch';
 
-const YourComponent = () => {
+const apiConfig = () => {
   const [filterActive, setFilterActive] = useState(false);
 
   const handleFilterToggle = () => {
@@ -11,19 +11,16 @@ const YourComponent = () => {
 
   return (
     <div>
-      <InstantSearch
-        // Add your InstantSearch configuration here
-      >
+      <InstantSearch>
         <Configure
           filters={filterActive ? 'price:[1 TO *]' : ''}
         />
         <button onClick={handleFilterToggle}>
           {filterActive ? 'Disable Filter' : 'Enable Filter'}
         </button>
-        {/* Other components for displaying search results, etc. */}
       </InstantSearch>
     </div>
   );
 };
 
-export default YourComponent;
+export default apiConfig;

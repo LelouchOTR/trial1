@@ -1,12 +1,14 @@
-import FilterComponent from '../components/FilterComponent';
+import React from 'react';
+import FilterComponent from './filter'; // Update the path as per your file structure
+import apiConfig from './filter';
 
-const HomePage = () => {
+const apiConfig = () => {
   return (
     <div>
-      <h1>Home Page</h1>
+      <h1>Your Page</h1>
       <FilterComponent />
     </div>
   );
 };
 
-export default HomePage;
+export default apiConfig;
