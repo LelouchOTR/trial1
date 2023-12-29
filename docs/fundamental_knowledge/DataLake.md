@@ -1,13 +1,13 @@
 # Data Lake
 
 ## Definition
-Ein Data Lake ist eine umfassende und flexible Datenplattform, die es ermöglicht, große Mengen an strukturierten und unstrukturierten Daten in ihrer Rohform zu speichern und zu verwalten. Anders als ein Data Warehouse, das Daten in vordefinierten Strukturen organisiert, ermöglicht ein Data Lake das Speichern von Daten in ihrem natürlichen Format, ohne vorherige Umwandlung oder Aggregation.
+A data lake is a comprehensive and flexible data platform that allows storing and managing large amounts of structured and unstructured data in its raw form. Unlike a data warehouse, which organizes data in predefined structures, a data lake enables the storage of data in its natural format without prior transformation or aggregation.
 
-In einem Data Lake können Daten aus verschiedenen Quellen wie Sensoren, Logdateien, sozialen Medien und Unternehmensanwendungen gesammelt werden. Dieser Ansatz ermöglicht es, eine breite Palette von Datenquellen zu integrieren, und bietet gleichzeitig die Flexibilität, die Daten später zu analysieren und zu strukturieren, wenn dies erforderlich ist.
+In a data lake, data from various sources such as sensors, log files, social media, and enterprise applications can be collected. This approach allows for the integration of a wide range of data sources while providing the flexibility to analyze and structure the data later if necessary.
 
-Der Begriff "Data Lake" spielt auf die Idee an, dass es sich um einen großen, flexiblen Speicher handelt, in dem eine Vielzahl von Datenquellen wie in einem See zusammenfließen. Dieser Ansatz erleichtert den Zugriff auf eine breite Palette von Daten für Analysen und Business-Intelligence-Zwecke
+The term 'Data Lake' alludes to the idea of it being a large, flexible storage where a variety of data sources converge, much like in a lake. This approach facilitates access to a broad range of data for analysis and business intelligence purposes.
 
 ![DataLake](https://github.com/health-io/2023-6a/assets/101985205/66978747-31a9-4fa8-be1a-6cce7687bdb3)
 
 
-Weiter Infos unter: https://cloud.google.com/learn/what-is-a-data-lake?hl=de
+For more information: https://cloud.google.com/learn/what-is-a-data-lake?hl=de
