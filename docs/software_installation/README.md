@@ -2,13 +2,13 @@
 
 ### Update
 
-##### Aufgrund von usebility im späteren Verlauf (Kosten) wird auf Opensearch umgeschwenkt. Die Handhabung ist sehr ähnlich zu elasticsearch.
+##### Due to usability considerations later on (costs), there is a switch to Opensearch. The handling is very similar to Elasticsearch.
 
 
 
-Mit der Installation auf einem lokalen oder virtuellen Server sollen praktische Erfahrungen im Bereich des Frontend und des Backends gesammelt werden. Zu diesen gehören die Installation, die Einrichtung von Datenbanken, die Anpassung von Einstellungen und die Einrichtung von Benutzerkonten (Liste nicht vollständig). Dieser Teil soll mit den 3 zuvor selektierten Software-Projekten umgesetzt werden.
-  - Projekt 1: Clickhouse
-  - Projekt 2: Snowflake
-  - Projekt 3: Elasticsearch
-  - Projekt 4: Opensearch
+The installation on a local or virtual server aims to gain practical experience in both frontend and backend areas. This includes installation, database setup, configuration adjustments, and setting up user accounts (list not exhaustive). This aspect will be implemented with the three previously selected software projects.
+  - Project 1: Clickhouse
+  - Project 2: Snowflake
+  - Project 3: Elasticsearch
+  - Project 4: Opensearch
 
