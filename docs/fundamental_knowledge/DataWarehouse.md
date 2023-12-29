@@ -16,4 +16,4 @@ The Data Warehouse is like a magical treasure chest that helps us find and under
 <img width="728" alt="Datawarehouse" src="https://github.com/health-io/2023-6a/assets/101985205/ea0668f5-6ae4-48c7-92cf-b895623e67a4">
 
 
-For more informations: https://cloud.google.com/learn/what-is-a-data-warehouse?hl=de#section-2
+For more information: https://cloud.google.com/learn/what-is-a-data-warehouse?hl=de#section-2
