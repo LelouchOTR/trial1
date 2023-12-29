@@ -1,10 +1,10 @@
-## PILOTPROJEKT MITTELS TESTDATENSATZ
+## PILOT PROJECT USING TEST DATASET
 
-Um die Funktionalität und Benutzerfreundlichkeit des DWH in einer realen Umgebung zu testen und Erfahrungen zu sammeln, soll ein geeigneter Testdatensatz importiert werden. Die Testdaten bestehen aus zwei Datensätzen: einem Basisdatensatz, der aus einer (anonymisierten) Kohorte von stammzelltransplantierten Patienten besteht, und einem Datensatz, der die entsprechenden Laborparameter enthält. Im Rahmen der Evaluation soll der Vorgang des Imports und selektiven Exports einer Subgruppe beurteilt werden.
-* Erstellung eines zweiteiligen Testdatensatzes
-  * Basisdatensatz von stammzelltransplantierten Patienten
-  * Anreicherung mit Labordaten über primary key (ID-Zahl)
-* Testbatterie zur Überprüfung der Features, Benutzerfreundlichkeit und Leistung des DWH_hematology
-* Bewertung der Ergebnisse und Diskussion möglicher Verbesserungen des DWH als Kernelement der Projektarbeit (Dokumentation in GitHub)
-* Überprüfung der Integrationsmöglichkeiten (vorhandene Schnittstellen), ob das ausgewählte DWH mit anderen Systemen und Technologien integriert werden kann (elektronische Patientenakten, Laborinformationssysteme)
-* Einarbeitung eines ärztlichen Kollegen/ einer ärztlichen Kollegin in den Umgang mit dem Data Warehouse (DWH) und Bewertung, inwieweit das System für das vorhandene (medizinische) digitale Ökosystem der Medizinischen Hochschule geeignet ist.
+To test the functionality and user-friendliness of the DWH in a real environment and gather experiences, a suitable test dataset will be imported. The test data consists of two datasets: a base dataset, comprising an (anonymized) cohort of stem cell-transplanted patients, and a dataset containing the corresponding laboratory parameters. As part of the evaluation, the process of importing and selectively exporting a subgroup will be assessed.
+* Creation of a two-part test dataset
+  * Base dataset of stem cell-transplanted patients
+  * Enrichment with laboratory data using a primary key (ID number)
+* Test battery to assess the features, user-friendliness, and performance of DWH_hematology
+* Assessment of the results and discussion of potential improvements to the DWH as a core element of the project work (documentation in GitHub)
+* Review of integration possibilities (existing interfaces) to assess whether the selected DWH can be integrated with other systems and technologies (electronic health records, laboratory information systems)
+* Training a medical colleague on the use of the Data Warehouse (DWH) and evaluating the extent to which the system is suitable for the existing (medical) digital ecosystem of the Medizinischen Hochschule Hannover (MHH)
