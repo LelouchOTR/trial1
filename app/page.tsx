@@ -17,14 +17,11 @@ import Head from "next/head"; // Import the Head component from next.js
 import readUploadFile from "./modules/on-file-upload"; // Import the function to read the uploaded file into a JSON object
 import CustomHits from "./components/custom-hits"; // Import the custom hits component to render the hit data in a table
 
-import { useRef } from "react"; // Import the useRef hook from react to create a reference to the input element
+import  {useRef}  from "react"; // Import the useRef hook from react to create a reference to the input element
 
-import { ResetInputButton } from "./components/reset-input-button"; // Import the ResetInputButton component
+import  {ResetInputButton}  from "./components/reset-input-button"; // Import the ResetInputButton component
 
-// import { Button, ButtonGroup } from "@nextui-org/react";
-// import Hit from "./components/Hit";
-// import * as opensearch from '@opensearch-project/opensearch'; // Import the opensearch module
-// const { searchClient } = require('@opensearch-project/opensearch');
+import exportTableToExcel from "./modules/excelExport"; // Import the exportTableToExcel function from excelExport.ts
 
 // Create a search client using the searchkit client module
 const searchClient = createClient({
@@ -32,27 +29,37 @@ const searchClient = createClient({
 });
 
 // Define the custom hit component
-const hitView = ({ hit }: { hit: any }) => {};
+const hitView = ({ hit }: { hit: any }) => {
+  // Your hitView component code here...
+};
 
-// Define the default export function that returns the search component
+// The main Search component
 export default function Search() {
-  const inputFile = useRef(null);
+
+    // Create a reference to the input element
+    const inputFile = useRef(null);
 
   // Function to reset the input element
-  function handleReset(e) {
-    // Create a function to clear the input element when the reset button is clicked
-    e.preventDefault();
-    if (inputFile.current) {
-      inputFile.current.value = "";
-      inputFile.current.type = "text";
-      inputFile.current.type = "file";
-    }
+function handleReset(e) {
+  e.preventDefault();
+  if (inputFile.current) {
+    inputFile.current.value = "";
+    inputFile.current.type = "text";
+    inputFile.current.type = "file";
   }
+}
+
+// Function to trigger exportTableToExcel
+function handleDownload() {
+  // Specify your table ID and filename
+  exportTableToExcel('upload', 'patientdata.xlsx');
+}
+
 
   return (
     <>
       <form>
-        {" "}
+{" "}
         {/* Create a form element */}
         <label htmlFor="upload">Upload File</label>{" "}
         {/* Create a label for the file input */}
@@ -64,25 +71,27 @@ export default function Search() {
           onChange={readUploadFile} // Specify the onChange handler as the readUploadFile function
         />
         <button // Create a button to reset the input
-          style={ResetInputButton}
-          onClick={(e) => {
-            handleReset(e);
-          }}
+          style={ResetInputButton} // Assuming you have ResetInputButton style defined
+          onClick={(e) => handleReset(e)}
         >
           Reset Input
         </button>
+
+        
+        <button // Create a button to download table content in an Excel file
+        style={ResetInputButton} // Assuming you have ResetInputButton style defined
+        onClick={handleDownload}>Download Excel</button> 
       </form>
 
-      <InstantSearch // Create an InstantSearch component
-        searchClient={searchClient} // Pass the search client as a prop
-        indexName="temp_index" // Pass the index name as a prop
+      <InstantSearch
+        searchClient={searchClient}
+        indexName="temp_index"
       >
         <Head>
-          {" "}
-          {/*Create a Head component*/}
+          {/* Create a Head component */}
           <link
             rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/instantsearch.css@7/themes/satellite-min.css" // Link to the instantsearch.css stylesheet
+            href="https://cdn.jsdelivr.net/npm/instantsearch.css@7/themes/satellite-min.css"
           />
         </Head>
         <SearchBox
@@ -90,20 +99,11 @@ export default function Search() {
           autoFocus // Create a SearchBox component
         />
 
-        <RefinementList
-          attribute="free_shipping" // Create a RefinementList component for the free_shipping attribute
-        />
-        <div> Age {/*Create a div element for the price label*/} </div>
-        <RangeInput
-          attribute="Age" // Create a RangeInput component for the price attribute
-        />
-
-        <CustomHits
-          hitComponent={hitView} // Create a Hits component with the custom hit component
-        />
-
-        <Pagination className="pagination"// Create a Pagination component
-        />
+        <RefinementList attribute="free_shipping" />
+        <div> Age </div>
+        <RangeInput attribute="Age" />
+        <CustomHits hitComponent={hitView} />
+        <Pagination className="pagination" />
       </InstantSearch>
     </>
   );
