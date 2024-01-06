@@ -10,6 +10,7 @@ import {
   SortBy,
   Pagination,
 } from "react-instantsearch";
+
 import React, {
   Fragment,
   createContext,
@@ -37,8 +38,10 @@ const hitView = ({ hit }: { hit: any }) => {};
 export default function Search() {
   const inputFile = useRef(null);
 
+  
+
   // Function to reset the input element
-  function handleReset(e) {
+  function handleReset(e: any) {
     // Create a function to clear the input element when the reset button is clicked
     e.preventDefault();
 
@@ -74,6 +77,7 @@ export default function Search() {
             className="inline-flex w-auto mt-2 mb-2 px-4 pt-3 text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-sky-50 file:text-sky-700 hover:file:bg-sky-100"
           />
         </form>
+        
 
         <Button // Button to refresh the data in the displayed table, currently not working
           className="w-auto ml-4 mt-2 inline-flex"
@@ -104,7 +108,7 @@ export default function Search() {
             {/*Create a Head component*/}
             <link
               rel="stylesheet"
-              // href="https://cdn.jsdelivr.net/npm/instantsearch.css@8.1.0/themes/satellite.css" // Link to the instantsearch.css stylesheet
+            // href="https://cdn.jsdelivr.net/npm/instantsearch.css@8.1.0/themes/satellite.css" // Link to the instantsearch.css stylesheet
             />
           </Head>
 
@@ -132,6 +136,8 @@ export default function Search() {
           >
             Age
           </label>
+
+
           <RangeInput
             id="Age"
             attribute="Age" // Create a RangeInput component for the price attribute
@@ -145,8 +151,7 @@ export default function Search() {
               submit:
                 "py-2.5 px-5 ml-2 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-sky-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700",
             }}
-          />
-
+          ></RangeInput>
           <CustomHits
             hitComponent={hitView} // Create a Hits component with the custom hit component
           />
@@ -166,6 +171,9 @@ export default function Search() {
             }}
           />
         </InstantSearch>
+
+
+
       </NextUIProvider>
     </>
   );

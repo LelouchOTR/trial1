@@ -1,12 +1,22 @@
 import fields_in_node from "./get-field-mapping";
+import React, { useState, useEffect } from "react";
 
-export default function buildRowsAndColumns(hits) {
+
+export default function buildRowsAndColumns(hits, addRow) {
+
   const rows = []; // Array to store the rows
-  const columns = []; // Array to store the columns
+  const columns = []; // Array to store the columns 
   for (let i = 0; i < fields_in_node.length; i++) {
     columns.push({ key: fields_in_node[i], label: fields_in_node[i] });
-  }
 
+  }
+ 
+  if (addRow) {
+    columns.push({
+      key: "test", label: "test"
+    });
+
+  }
   for (let i = 0; i < hits.length; i++) {
     const row = {};
 
@@ -20,6 +30,9 @@ export default function buildRowsAndColumns(hits) {
     }
     rows.push(row);
   }
-
+  
   return { rows, columns };
+
 }
+  
+
