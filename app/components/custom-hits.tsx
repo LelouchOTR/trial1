@@ -6,7 +6,7 @@ import buildRows from "../modules/build-rows";
 function CustomHits(props: UseHitsProps) {
   // Get the hits and the sendEvent function from the useHits hook
   const { hits, sendEvent } = useHits(props);
-
+  console.log(hits);
   // Return the JSX element that renders the table
   return (
     <div className="table-wrapper">
