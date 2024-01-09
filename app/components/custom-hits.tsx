@@ -30,9 +30,6 @@ function CustomHits(props: UseHitsProps) {
 
   const { rows, columns } = buildRowsAndColumns(hits, addColumn1, editRowID);  // 
 
-  console.log("Hit Length", hits.length);
-  console.log("rows", rows, columns);
-
   // function to change Value of addColumn when Button is clicked on
   const handleAddColumn = () => {
     setaddColumn1((prevValue) => !prevValue);
