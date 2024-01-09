@@ -2,6 +2,7 @@
 import { useHits, UseHitsProps } from "react-instantsearch";
 // import buildRows from "../modules/build-rows";
 import fields_in_node from "../modules/get-field-mapping";
+import { EditIcon } from "./EditIcon";
 import {
   Table,
   TableHeader,
@@ -13,6 +14,8 @@ import {
   Tab,
   NextUIProvider,
   Button,
+  Input,
+  Tooltip,
 } from "@nextui-org/react";
 import buildRowsAndColumns from "../modules/build-rows-and-columns";
 import React, { useState, useEffect } from 'react';
@@ -22,15 +25,27 @@ function CustomHits(props: UseHitsProps) {
 
   // Define UseState for adding extra Column. Required, otherwise table is not updated
   const [addColumn1, setaddColumn1] = useState(false);
+  const [editRow, setEditRow] = useState(false);
+  const [editRowID, setEditRowID] = useState(undefined);
 
-  const { rows, columns } = buildRowsAndColumns(hits, addColumn1);  // 
+  const { rows, columns } = buildRowsAndColumns(hits, addColumn1, editRowID);  // 
+
+  console.log("Hit Length", hits.length);
+  console.log("rows", rows, columns);
 
   // function to change Value of addColumn when Button is clicked on
   const handleAddColumn = () => {
-    setaddColumn1((prevValue) => !prevValue); 
+    setaddColumn1((prevValue) => !prevValue);
+  }
+
+  const handleEditRow = (rowID: any) => {
+    console.log("rows in EditRow", rows);
+    setEditRowID(rowID)
+    // setEditRow((prevValue) => !prevValue);
   }
 
   if (hits.length == 0) {
+    console.log("if is working"); 
     // If there are no hits, return a table with a single row of empty values with arbitrary column names
     const hits = [
       {
@@ -120,6 +135,15 @@ function CustomHits(props: UseHitsProps) {
     );
   } else {
 
+    for (let i = 0; i < rows.length; i++) {
+      // console.log("row[i]:", rows[i]); 
+      rows[i]["Edit"] = <Tooltip content="Edit user">
+        <div className="text-lg text-default-400 cursor-pointer active:opacity-50" onClick={() => handleEditRow(rows[i].ID)} >
+          <EditIcon />
+        </div>
+      </Tooltip>/* Wert für das "Edit"-Feld, z.B. ein Button, Link oder andere Daten */;
+    }
+
     // If there are hits, build the rows and columns from the hits
     // Return the JSX element that renders the table
 
@@ -128,6 +152,7 @@ function CustomHits(props: UseHitsProps) {
       <NextUIProvider>
         <Button className="w-auto ml-4 mt-2 inline-flex" variant="ghost"
           onClick={handleAddColumn} > Add Column </Button>
+
         {/* Use the Table component from the NextUI library */}
         <Table aria-label="Example table with dynamic content" isStriped>
           <TableHeader columns={columns}>

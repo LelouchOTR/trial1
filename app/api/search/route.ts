@@ -22,6 +22,8 @@ const apiConfig = {
 // Create a client instance using the api configuration
 const apiClient = Client(apiConfig);
 
+
+
 // Define the default export function that handles the POST request
 export async function POST(req: NextRequest, res: NextResponse) {
   const data = await req.json(); // Get the request data as JSON
