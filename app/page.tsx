@@ -38,8 +38,6 @@ const hitView = ({ hit }: { hit: any }) => {};
 export default function Search() {
   const inputFile = useRef(null);
 
-  
-
   // Function to reset the input element
   function handleReset(e: any) {
     // Create a function to clear the input element when the reset button is clicked
@@ -77,7 +75,6 @@ export default function Search() {
             className="inline-flex w-auto mt-2 mb-2 px-4 pt-3 text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-sky-50 file:text-sky-700 hover:file:bg-sky-100"
           />
         </form>
-        
 
         <Button // Button to refresh the data in the displayed table, currently not working
           className="w-auto ml-4 mt-2 inline-flex"
@@ -108,7 +105,7 @@ export default function Search() {
             {/*Create a Head component*/}
             <link
               rel="stylesheet"
-            // href="https://cdn.jsdelivr.net/npm/instantsearch.css@8.1.0/themes/satellite.css" // Link to the instantsearch.css stylesheet
+              // href="https://cdn.jsdelivr.net/npm/instantsearch.css@8.1.0/themes/satellite.css" // Link to the instantsearch.css stylesheet
             />
           </Head>
 
@@ -136,7 +133,6 @@ export default function Search() {
           >
             Age
           </label>
-
 
           <RangeInput
             id="Age"
@@ -171,9 +167,6 @@ export default function Search() {
             }}
           />
         </InstantSearch>
-
-
-
       </NextUIProvider>
     </>
   );

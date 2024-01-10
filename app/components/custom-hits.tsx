@@ -18,7 +18,7 @@ import {
   Tooltip,
 } from "@nextui-org/react";
 import buildRowsAndColumns from "../modules/build-rows-and-columns";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 // Define a custom component that renders a table of hits
 function CustomHits(props: UseHitsProps) {
   const { hits, sendEvent } = useHits(props);
@@ -28,18 +28,23 @@ function CustomHits(props: UseHitsProps) {
   const [editRow, setEditRow] = useState(false);
   const [editRowID, setEditRowID] = useState(undefined);
 
-  const { rows, columns } = buildRowsAndColumns(hits, addColumn1, editRowID, editRow);  
+  const { rows, columns } = buildRowsAndColumns(
+    hits,
+    addColumn1,
+    editRowID,
+    editRow
+  );
 
   // function to change Value of addColumn when Button is clicked on
   const handleAddColumn = () => {
     setaddColumn1((prevValue) => !prevValue);
-  }
+  };
 
   // function to change value of editRowID
   const handleEditRow = (rowID: any) => {
     setEditRowID(rowID); // set editRowID == rowID
     setEditRow((prevValue) => !prevValue);
-  }
+  };
 
   if (hits.length == 0) {
     // If there are no hits, return a table with a single row of empty values with arbitrary column names
@@ -130,15 +135,18 @@ function CustomHits(props: UseHitsProps) {
       </NextUIProvider>
     );
   } else {
-
     for (let i = 0; i < rows.length; i++) {
-
       // Put the edit Button in every row
-      rows[i]["Edit"] = <Tooltip content="Edit">
-        <div className="text-lg text-default-400 cursor-pointer active:opacity-50" onClick={() => handleEditRow(rows[i].ID)} >
-          <EditIcon />
-        </div>
-      </Tooltip>
+      rows[i]["Edit"] = (
+        <Tooltip content="Edit">
+          <div
+            className="text-lg text-default-400 cursor-pointer active:opacity-50"
+            onClick={() => handleEditRow(rows[i].ID)}
+          >
+            <EditIcon />
+          </div>
+        </Tooltip>
+      );
     }
 
     // If there are hits, build the rows and columns from the hits
@@ -147,8 +155,14 @@ function CustomHits(props: UseHitsProps) {
     return (
       // Wrap the table inside the NextUIProvider component
       <NextUIProvider>
-        <Button className="w-auto ml-4 mt-2 inline-flex" variant="ghost"
-          onClick={handleAddColumn} > Add Column </Button>
+        <Button
+          className="w-auto ml-4 mt-2 inline-flex"
+          variant="ghost"
+          onClick={handleAddColumn}
+        >
+          {" "}
+          Add Column{" "}
+        </Button>
 
         {/* Use the Table component from the NextUI library */}
         <Table aria-label="Example table with dynamic content" isStriped>

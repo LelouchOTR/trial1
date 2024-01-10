@@ -130,5 +130,5 @@ export default async function bulkUploadToElastic(formatted_data) {
 
   const count = await client.count({ index: "temp_index" }); // Get the document count of the index
   console.log("count: ", count); // Log the count
-  revalidatePath('/','layout'); // Refresh the data, currently does not work
+  revalidatePath("/", "layout"); // Refresh the data, currently does not work
 }
