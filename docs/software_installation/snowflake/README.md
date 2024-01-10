@@ -1,7 +1,7 @@
 # About Snowflake
 
-Snowflake Inc. ist ein Cloud-basiertes Software-as-a-Service-Unternehmen.
+Snowflake Inc. is a cloud-based Software-as-a-Service (SaaS) company.
 
-dadurch das es mit vergleichsweise hohen kosten verbunden ist wird nicht näher drauf eingegangen.
+Due to its relatively high costs, it is not discussed in detail.
 
-Sollte interesse bestehen es allerdings trotzdem herrunterzu laden ist unter https://docs.snowflake.com/en/user-guide/snowsql-install-config ein Guied dazu.
+If there is interest in downloading it despite the relatively high costs, there is a guide available for that: https://docs.snowflake.com/en/user-guide/snowsql-install-config 

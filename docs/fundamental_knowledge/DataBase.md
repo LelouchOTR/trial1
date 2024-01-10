@@ -1,13 +1,13 @@
 # DataBase
 
 ## Definition
-Eine Datenbank, auch Datenbanksystem genannt, ist im Grunde ein elektronisches System, das dazu dient, Daten effizient zu verwalten. Die Hauptaufgabe besteht darin, große Datenmengen so zu speichern, dass sie widerspruchsfrei und dauerhaft verfügbar sind. Außerdem sollen benötigte Teilmengen der Daten in verschiedenen, benutzerfreundlichen Formen für Anwender und Programme bereitgestellt werden.
+A database, also known as a database system, is essentially an electronic system designed to efficiently manage data. Its main task is to store large amounts of data in a manner that is consistent and permanently accessible. Additionally, subsets of the data should be provided in various user-friendly forms for users and programs as needed.
 
-Um dies zu erreichen, werden Daten in den gängigsten Datenbanken heute oft in Tabellen organisiert, die aus Zeilen und Spalten bestehen. Dieses Tabellenmodell ermöglicht eine effiziente Verarbeitung und Abfrage der Daten. Benutzer können dann einfach auf die Daten zugreifen, sie verwalten, ändern, aktualisieren, überprüfen und organisieren.
+To achieve this, data in most common databases today is often organized into tables, which consist of rows and columns. This table model enables efficient processing and querying of data. Users can then easily access, manage, modify, update, review, and organize the data.
 
-Ein häufig verwendetes Werkzeug für die Interaktion mit Datenbanken ist die Structured Query Language (SQL). Mit SQL können Daten geschrieben und abgefragt werden, was den Umgang mit Daten in Datenbanken erleichtert
+A commonly used tool for interacting with databases is the Structured Query Language (SQL). With SQL, data can be written and queried, facilitating the manipulation of data in databases.
 
 ![Database](https://github.com/health-io/2023-6a/assets/101985205/8fdf3047-746b-4709-ad2a-b48d2823930c)
 
 
-Für weitere Infos: https://www.paessler.com/de/it-explained/database
+For more information: https://www.paessler.com/de/it-explained/database

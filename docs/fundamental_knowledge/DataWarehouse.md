@@ -2,17 +2,18 @@
 
 ## Definition
 ##### Normal:
-  Ein Data Warehouse ist eine zentrale, speziell entwickelte Datenbank, die umfassende und konsolidierte Informationen aus verschiedenen Quellen sammelt, speichert und organisiert. Es dient dazu, große Mengen an Daten zu analysieren und geschäftliche Entscheidungsprozesse zu unterstützen. Ein Data Warehouse ermöglicht eine effiziente Extraktion, Transformation und Laden von Daten (ETL) und bietet zudem leistungsfähige Werkzeuge für die Datenanalyse, Berichterstellung und Business Intelligence. Durch die Zusammenführung verschiedener Datenquellen schafft ein Data Warehouse eine konsistente und integrierte Datenbasis, die eine umfassende Sicht auf die Geschäftsaktivitäten ermöglicht.
-##### Einfach:
-  Stell dir vor, ein Data Warehouse ist wie eine riesige Schatztruhe für Informationen. In dieser Truhe sind viele verschiedene Schätze versteckt - das sind die Daten. Diese Daten kommen von vielen Orten, wie zum Beispiel von verschiedenen Spielen, Büchern oder sogar von deiner Schule.
+A Data Warehouse is a central, specially designed database that collects, stores, and organizes comprehensive and consolidated information from various sources. It is designed to analyze large amounts of data and support business decision-making processes. A Data Warehouse enables efficient Extraction, Transformation, and Loading of data (ETL) and also provides powerful tools for data analysis, reporting, and business intelligence. By consolidating different data sources, a Data Warehouse creates a consistent and integrated data foundation that allows for a comprehensive view of business activities.
 
-  Das Besondere an dieser Schatztruhe ist, dass sie nicht nur die Informationen speichert, sondern sie auch ordentlich sortiert. Das bedeutet, dass wir, wenn wir etwas Bestimmtes suchen, schnell und einfach in der Schatztruhe nachsehen können, anstatt überall im Haus danach zu suchen.
+##### Simple:
+Imagine a Data Warehouse as a giant treasure chest of information. In this chest, many different treasures are hidden - these are the data. These data come from various places, such as different games, books, or even from your school.
 
-  Manchmal wollen Erwachsene, die diese Schatztruhe benutzen, herausfinden, welche Spiele oder Bücher am beliebtesten sind. Das Data Warehouse hilft ihnen dabei, indem es alle Informationen an einem Ort sammelt, sodass sie leicht herausfinden können, welche Schätze die wichtigsten und interessantesten sind.
+What makes this treasure chest special is that it not only stores the information but also organizes it neatly. This means that when we're looking for something specific, we can quickly and easily check the treasure chest instead of searching everywhere in the house.
 
-  Also, das Data Warehouse ist wie eine magische Schatztruhe, die uns hilft, all die coolen Informationen zu finden und zu verstehen, die uns interessieren!
+Sometimes, adults who use this treasure chest want to find out which games or books are the most popular. The Data Warehouse helps them by gathering all the information in one place, making it easy for them to discover which treasures are the most important and interesting.
+
+The Data Warehouse is like a magical treasure chest that helps us find and understand all the cool information that interests us!
 
 <img width="728" alt="Datawarehouse" src="https://github.com/health-io/2023-6a/assets/101985205/ea0668f5-6ae4-48c7-92cf-b895623e67a4">
 
 
-Weitere Infos unter: https://cloud.google.com/learn/what-is-a-data-warehouse?hl=de#section-2
+For more information: https://cloud.google.com/learn/what-is-a-data-warehouse?hl=de#section-2

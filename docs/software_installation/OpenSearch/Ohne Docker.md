@@ -1,8 +1,8 @@
 # OpenSearch ohne Docker
 
-1. Herunterladen der zip-Datei von https://opensearch.org/downloads.html
+1. Downloading the zip file from: https://opensearch.org/downloads.html
 
-2. Ändern der opensearch.yml im config-Ordner - Ganz unten einfügen:
+2. Editing the opensearch.yml file in the config folder - inserting at the very bottom:
 
 
       plugins.security.disabled: true
@@ -15,6 +15,6 @@
    
       http.cors.allow-headers: X-Requested-With,X-Auth-Token,Content-Type,Content-Length
 
-4.   ./opensearch-windows-install.bat im terminal des Ordners eingeben & ausführen
+4.   ./opensearch-windows-install.bat enter and execute in the terminal of the folder
 
-5. Im Browser eingeben: http://localhost:9200/
+5. Enter in the browser: http://localhost:9200/

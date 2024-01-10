@@ -80,7 +80,7 @@ The project aims to aggregate and store all data collected for a patient. If a d
 
 An idea for an intuitive frontend is presented here. The extent to which this can be implemented will need to be clarified as the project progresses.
 
-![alt text](docs/erster-entwurf-frontend.jpeg)
+![alt text](docs/erster-entwurf-frontend_englisch.jpg)
 
 ## Setup
 

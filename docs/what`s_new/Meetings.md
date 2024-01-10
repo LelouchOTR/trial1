@@ -1,124 +1,121 @@
 ## 03.11.2023, Initioal Meeting at MHH
-  - Kennenlernen
-  - Projekt definieren
-  - Erwartungen abfragen
+  - Getting to know each other
+  - Define the project
+  - setting expactations
 
-Projekt:
-  Datawarehouse für die Hämatologie Onkologie erstellen. Auf Basis von Open Source oder Low Budget. Good usebility für non technical People muss gewärleistet sein (einfach erweiterbar einfache Daten Extraktion).
-  Aufteilung in Unterkategorien:
+Project:
+Create a data warehouse for hematology and oncology. Based on open source or low budget. Good usability for non-technical people must be ensured (easy to expand, simple data extraction).
+Division into subcategories:
   
-    - PROJEKT-RECHERCHE
+    - PROJECT RESEARCH
 
     - FEATURE-SELECTION
 
     - SOFTWARE INSTALLATION
     
-    - PILOTPROJEKT MITTELS TESTDATENSATZ
+    - PILOT PROJECT USING TEST DATASET
 
 
 ## 10.11.2023
-  - Rollenverteilung
-  - Erste Software Sammlung
-  - Github Einrichtung
-  - Besprechung weiteres Vorgehen:
+  - Assignment of Roles
+  - Initial Software Collection
+  - GitHub Setup
+  - Discussion of Next Steps:
 
-        - Github weiter ausbauen
+        - Further Development on GitHub
 
-        - In Software vertiefen
+        - Deepen Knowledge in Software
 
-        - Software presentable machen für nächstes Meeting
+        - Prepare Software for Presentation in the next Meeting
 
 
-## 13.11.2023: Sofware Vorstellung
+## 13.11.2023: Software Presentation
 - Problem: Hosting? MHH vs lokal vs Amazon
 
-- Wenn low-budget, dann wie viel maximal? --> mit der MHH besprechen
+- If low-budget, then how much is the maximum? --> Discuss with the MHH
 
-- 3 Databasses aussuchen und der MHH vorstellen
+- Select 3 databases and present them to the MHH
 
       - Snowflake (https://www.snowflake.com/de/solutions/industries/healthcare-and-life-sciences/)
     
       - Clickhouse (https://clickhouse.com/)
     
-      - elastic search --> Warum können/sollen wir das nutzen, wenn es Geld kostet? --> Am Freitag die Vorstellung abwarten
+      - elastic search --> Why can/should we use it if it costs money? --> Wait for the presentation on Friday
 
 
-## 17.11.2023: Vorstellung Installation Elastic search
-- kurze mündliche Zusammenfassung des discord Meetings vom 13.11.23 um alle auf einen Stand zu bringen
+## 17.11.2023: Presentation of Elasticsearch Installation
+- Short verbal summary of the Discord meeting on 13.11.23 to get everyone up to speed
 
-- Kurzvorstellung der Installation einer kostenlosen Variante von elasticsearch
+- Brief introduction to the installation of a free version of Elasticsearch
 
-- Erste Schritte Installation und Besprechung des weiteren Vorgehens
+- First steps: Installation and discussion of the next steps
 
-      - Installieren und einarbeiten in elasticsearch
+      - Install and familiarize with Elasticsearch
   
-      - Erstellen einer Präsentation für die MHH mit drei Software-Möglichkeiten inkl. vorraussichtliche Kosten und Features
+      - Creating a presentation for the MHH with three software options, including estimated costs and features
     
-      - Erstellen der Präsentation für die Vorlesung (Vorstellung der Gruppe) - OneDrive, gemeinsames bearbeiten (Link in der WhatsApp Gruppe)
+      - Creating the presentation for the lecture (group introduction) - OneDrive, collaborative editing (link in the WhatsApp group)
 
 
 
-## 22.11 Meeting zu elasticsearch
+## 22.11 Meeting for elasticsearch
 
-- haben festgestellt wir müssen ein frontend bauen (web based)
-- Mit betreuern nochmal sprechen clickhoese oder elasticsearch
-- Userstory angesprochen
-- meilisearch angesprochen --> alle bitte mal mit auseinandersetzten
-- Aufgaben verteilung gemacht:
+- We have realized that we need to build a frontend (web-based)
+- Speak with supervisors again about ClickHouse or Elasticsearch
+- Discussed user stories
+- Discussed Meilisearch --> Everyone, please take some time to familiarize yourselves with it
+- Task distribution has been done:
   
-		  - Muneeb schreibt guid für Elasticsearch
-		  - Patricia überarbeitet Userstory
-	  	- Eline macht die Präsentationen fertig
-			    --> alle anderen überprüfen dies
-	  	- Alle setzten sich damit auseinander wie wir unser Frontend gestallten wollen
-    
+		  - Muneeb is writing a guide for Elasticsearch
+		  - Patricia is revising the user story
+	  	  - Eline is finishing the presentations
+			    --> Everyone else, please review the presentation
+	          - Everyone is working on how we want to design our frontend
 
-## 24.11 Besprechung in und nach der Vorlesung
+## 24.11 Discussion during and after the lecture
 
-- Opensearch als alternative für elasticsearch
-- Frontend Design Idee bis Montag Fertig machen
-- Test Daten generieren
+- Opensearch as an alternative for Elasticsearch
+- Complete the frontend design idea by Monday
+- Generate test data
 
+## 01.12 Discussion during and after the lecture
 
-## 01.12 Besprechung in und nach der Vorlesung
+- Everyone gets Opensearch up and running
+- Everyone is getting familiar with React (watching tutorials, trying it out, ...)
+- Updating the current status, what already exists, on GitHub
 
-- alle bringen openserch zum laufen
-- alle setzen sich mit React auseinander (Tutorials schauen, ausprobieren, ...)
-- updaten der bisherigen Stände, was bereits besteht auf GitHub 
+## 01.12. Document Manager meeting
 
-
-## 01.12. Dokumentenmanager-Besprechung
-
-- Ordnerstruktur bearbeiten in GitHub (nicht viele Ordner mit nur ein oder zwei Dateien dirn)
-  	- Vorgabe für Struktur s. Github
-  	- nicht jeder Ordner braucht eine readme.md Datei
-- auf der ersten Seite (README.md) sind Bilder gern gesehen, die schnell und einfach erklären was wir machen
-- Ordner und Dateinamen nicht in Großbuchstaben 
-- Branches verwenden
-- Code und Bilder die bestehen auch immer gleich auf GitHub
-- Autodoc string in visual Studio Code nutzen für erklärungen von Funktionen oder ähnliches empohlen
+- "Edit folder structure on GitHub (not too many folders with only one or two files inside)
+  	- Guidelines for structure, see GitHub
+  	- Not every folder needs a readme.md file
+- On the first page (README.md), pictures are welcome to quickly and easily explain what we do
+- Folder and file names in lowercase, not uppercase
+- Use branches
+- Code and images that exist should always be consistent on GitHub
+- Recommend using Autodoc string in Visual Studio Code for explanations of functions or similar
   
 
-## 06.12 Pilot- Projekt 
-- Pilot Projekt von Muneeb auf zweiten Rechner installiert
-- Problem: Suchfunktion funktioniert nicht mit OpenSearch
-  - Ungewiss wie viel Aufwand es ist das Problem zu lösen
-- Derzeitige Lösung: Verwendung von Elastich Search
-- Next Steps (genauere Ausführung in Issues):
+## 06.12 Pilot- Project 
+- Muneeb installed the pilot project on a second computer
+- Problem: Search function is not working with OpenSearch
+  - Uncertain about the effort required to solve the problem
+- Current solution: Using Elasticsearch
+- Next Steps (More detailed explanation in the Issues section):
   	- Download Button
-  	- Anpassung des Test datas auf Zahlen
-  	- Graphische Darstellung
+  	- Adjustment of the test data to numbers
+  	- Graphical representation
   ![Bildschirmfoto 2023-12-07 um 10 49 58](https://github.com/health-io/2023-6a/assets/147921668/c0f92ef1-ea65-4755-ad31-6dbd16feb2db)
 
 
-## 8.12. Vorlesung
-Termine: 
- - 19.01.2024 - Präsentation Projekte
- - 26.01.2024 - Alternativtermin Präsentation Projekte (bei Krankheit)
- - Anfang März - Abgabe der schriftlichen Zusammenfassung
+## 08.12. Lecture
+Appointments: 
+ - 19.01.2024 - Presentation of projects
+ - 26.01.2024 - Alternative date for the presentation of projects (in case of illness)
+ - Early March (04.03?)- Submission of the written summary
 
-## 15.12. Vorlesung 
- - Bearbeitung GitHub (Links, Rechtschreibfehler, ...)
- - Frondend-Web-App auf verschiednen Laptops zum laufen gebracht
-   - Hauptfehler: hochladen der Dateien nicht über curl, sondern über curl.exe (korrigiert auf GitHub)
- - nächste Woche findet die VL vermutlich nicht statt
+## 15.12. Lecture 
+ - Editing GitHub (links, spelling errors, ...)
+ - Frontend web app successfully running on various laptops
+   - Main issue: uploading files not using curl, but curl.exe (corrected on GitHub)
+ - Next week, the lecture probably won't take place
