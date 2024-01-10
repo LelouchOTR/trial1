@@ -25,6 +25,7 @@ import readUploadFile from "./modules/on-file-upload"; // Import the function to
 import CustomHits from "./components/custom-hits"; // Import the custom hits component to render the hit data in a table
 import { useRouter } from "next/navigation";
 import { Button, ButtonGroup, NextUIProvider } from "@nextui-org/react";
+import GetHitsForExport from "./components/export-view-button";
 
 // Create a search client using the searchkit client module
 const searchClient = createClient({
@@ -109,6 +110,8 @@ export default function Search() {
             />
           </Head>
 
+          <GetHitsForExport></GetHitsForExport>
+
           <SearchBox
             placeholder="Search IDs"
             autoFocus
@@ -122,10 +125,6 @@ export default function Search() {
               loadingIcon: "inline-flex items-center",
             }}
           />
-
-          {/* <RefinementList
-          attribute="free_shipping" // Create a RefinementList component for the free_shipping attribute
-        /> */}
 
           <label
             id="Age"
