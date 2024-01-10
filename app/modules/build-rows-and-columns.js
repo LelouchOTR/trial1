@@ -3,14 +3,10 @@ import React, { useState, useEffect } from "react";
 import { Input } from "@nextui-org/react";
 
 
-export default function buildRowsAndColumns(hits, addColumn, editRowID) {
+export default function buildRowsAndColumns(hits, addColumn, editRowID, editRow) {
 
   const rows = []; // Array to store the rows
   const columns = []; // Array to store the columns 
-
-  console.log("editRowID", editRowID);
-
-
 
 
   for (let i = 0; i < hits.length; i++) {
@@ -24,30 +20,36 @@ export default function buildRowsAndColumns(hits, addColumn, editRowID) {
         row[fields_in_node[j]] = hits[i][fields_in_node[j]];
       }
     }
-    console.log("row before input", row);
-
+  // checks if there editRowID is defined and put <Input> instead of the data as entry
     if (editRowID && row.ID == editRowID) {
-      for (const field in row) {
+      for (const field in row) { 
         console.log("fields", field);
         row[field] = <Input defaultValue={row[field]} />;
       }
       if (addColumn) {
-        row['test'] = <Input />;
+        row['newColumn'] = <Input />;
       }
     }
     rows.push(row);
   }
 
-
-
   for (let i = 0; i < fields_in_node.length; i++) {
     columns.push({ key: fields_in_node[i], label: fields_in_node[i] })
   }
+
+  
   if (addColumn) {
     columns.push({
-      key: "test", label: "test"
+      key: "newColumn", label: "newColumn"
     });
-
+  }
+// If editRow is true, the name of the newColumn can be changed
+  if (editRow) {
+    columns.forEach((column) => {
+      if (column.key === 'newColumn') {
+        column.label = <Input></Input>;
+      }
+    });
   }
 
   columns.push({ key: "Edit", label: "Edit" });

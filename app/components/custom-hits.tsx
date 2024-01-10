@@ -24,25 +24,24 @@ function CustomHits(props: UseHitsProps) {
   const { hits, sendEvent } = useHits(props);
 
   // Define UseState for adding extra Column. Required, otherwise table is not updated
-  const [addColumn1, setaddColumn1] = useState(false);
+  const [addColumn1, setaddColumn1] = useState(false); // useState is a react function. When an useState const is changed, the table is rerendered.
   const [editRow, setEditRow] = useState(false);
   const [editRowID, setEditRowID] = useState(undefined);
 
-  const { rows, columns } = buildRowsAndColumns(hits, addColumn1, editRowID);  // 
+  const { rows, columns } = buildRowsAndColumns(hits, addColumn1, editRowID, editRow);  
 
   // function to change Value of addColumn when Button is clicked on
   const handleAddColumn = () => {
     setaddColumn1((prevValue) => !prevValue);
   }
 
+  // function to change value of editRowID
   const handleEditRow = (rowID: any) => {
-    console.log("rows in EditRow", rows);
-    setEditRowID(rowID)
-    // setEditRow((prevValue) => !prevValue);
+    setEditRowID(rowID); // set editRowID == rowID
+    setEditRow((prevValue) => !prevValue);
   }
 
   if (hits.length == 0) {
-    console.log("if is working"); 
     // If there are no hits, return a table with a single row of empty values with arbitrary column names
     const hits = [
       {
@@ -133,12 +132,13 @@ function CustomHits(props: UseHitsProps) {
   } else {
 
     for (let i = 0; i < rows.length; i++) {
-      // console.log("row[i]:", rows[i]); 
-      rows[i]["Edit"] = <Tooltip content="Edit user">
+
+      // Put the edit Button in every row
+      rows[i]["Edit"] = <Tooltip content="Edit">
         <div className="text-lg text-default-400 cursor-pointer active:opacity-50" onClick={() => handleEditRow(rows[i].ID)} >
           <EditIcon />
         </div>
-      </Tooltip>/* Wert für das "Edit"-Feld, z.B. ein Button, Link oder andere Daten */;
+      </Tooltip>
     }
 
     // If there are hits, build the rows and columns from the hits
