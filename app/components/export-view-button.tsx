@@ -8,7 +8,7 @@ import { Button } from "@nextui-org/react";
 import exportToExcel from "../modules/export-view";
 
 // Define a function component to get hits from the client
-export default function GetHitsFromClient(props) {
+export default function GetHitsForExport(props) {
   // Use the useHits hook to get the hits from the props
   const { hits } = useHits(props);
   // Uncomment the following line to log the hits to the console
