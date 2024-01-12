@@ -47,7 +47,7 @@ function CustomHits(props: UseHitsProps) {
   };
 
   if (hits.length == 0) {
-    // If there are no hits, return a table with a single row of empty values with arbitrary column names
+    // If there are no hits, return a skeleton
     return (
       <NextUIProvider>
         <div
