@@ -13,9 +13,7 @@ const apiConfig = {
   },
   search_settings: {
     search_attributes: ["ID"], // Specify the attributes to search on
-    result_attributes: fields_in_node, // Specify the attributes to return in the results
-    highlight_attributes: fields_in_node, // Specify the attributes to highlight in the results
-    facet_attributes: [{ attribute: "Age", field: "Age", type: "numeric" }], // Specify the attributes to facet on
+    facet_attributes: [{ attribute: "Age", field: "Age", type: "numeric" }, { attribute: "Glucose", field: "Glucose", type: "numeric" }], // Specify the attributes to facet on
   },
 };
 

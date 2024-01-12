@@ -147,6 +147,29 @@ export default function Search() {
                 "py-2.5 px-5 ml-2 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-sky-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700",
             }}
           ></RangeInput>
+
+          <label
+            id="Glucose"
+            className="relative text-sm text-gray-500 dark:text-gray-400 vertical-align:middle duration-300 transform -translate-y-4 scale-75 bg-white dark:bg-gray-900 ml-4 peer-focus:px-2 peer-focus:text-sky-600 peer-focus:dark:text-sky-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1"
+          >
+            Glucose
+          </label>
+
+          <RangeInput
+            id="Glucose"
+            attribute="Glucose" // Create a RangeInput component for the price attribute
+            precision={2} // Specify the precision
+            classNames={{
+              root: "pl-3 shadow-sm inline-flex",
+              form: "relative",
+              input:
+                "w-auto text-center pl-3 pr-0 py-2 bg-transparent border border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 rounded-md focus:ring-1",
+              separator: "text-slate-500 px-2 text-center",
+              submit:
+                "py-2.5 px-5 ml-2 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-sky-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700",
+            }}
+          ></RangeInput>
+
           <CustomHits
             hitComponent={hitView} // Create a Hits component with the custom hit component
           />
