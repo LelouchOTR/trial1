@@ -13,7 +13,10 @@ const apiConfig = {
   },
   search_settings: {
     search_attributes: ["ID"], // Specify the attributes to search on
-    facet_attributes: [{ attribute: "Age", field: "Age", type: "numeric" }, { attribute: "Glucose", field: "Glucose", type: "numeric" }], // Specify the attributes to facet on
+    facet_attributes: [
+      { attribute: "Age", field: "Age", type: "numeric" },
+      { attribute: "Glucose", field: "Glucose", type: "numeric" },
+    ], // Specify the attributes to facet on
   },
 };
 

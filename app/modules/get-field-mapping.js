@@ -6,7 +6,7 @@ const fields_in_node = []; // Array to store the fields present in the elasticse
 async function getFieldMapping() {
   // Function to get the fields present in the elasticsearch node
   const mapping = await client.indices.getMapping({ index: "temp_index" }); // Get the mapping of the index
-  
+
   for (const field in mapping["temp_index"]["mappings"]["properties"]) {
     // Iterate over the fields in the mapping
     fields_in_node.push(field.toString()); // Push the field to the array
