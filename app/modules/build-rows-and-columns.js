@@ -24,7 +24,6 @@ export default function buildRowsAndColumns(
     // checks if there editRowID is defined and put <Input> instead of the data as entry
     if (editRowID && row.ID == editRowID) {
       for (const field in row) {
-        console.log("fields", field);
         row[field] = <Input defaultValue={row[field]} />;
       }
       if (addColumn) {

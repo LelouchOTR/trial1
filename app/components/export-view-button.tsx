@@ -19,7 +19,7 @@ export default function GetHitsForExport(props) {
     // Wrap the button in the NextUIProvider component
     <NextUIProvider>
       {/* Render a button with some styles and a click handler */}
-      <Button
+      <Button color="default"
         className="w-auto ml-4 mt-2 inline-flex"
         variant="ghost"
         onClick={() => {
