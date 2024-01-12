@@ -40,7 +40,6 @@ export async function POST(req: NextRequest, res: NextResponse) {
       ];
     },
   });
-  // console.log(results);
 
   // Return the results as JSON
   return NextResponse.json(results);
